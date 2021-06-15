@@ -1,0 +1,26 @@
+// /* Пример*/
+// @font-face {
+//   font-family: "Roboto";
+//   font-style: normal;
+//   font-weight: 900;
+//   font-display: swap;
+//   src: local("Roboto Black"), local("Roboto-Black"),
+//        url("../fonts/roboto-black.woff2") format("woff2"),
+//        url("../fonts/roboto-black.woff") format("woff");
+
+//  }
+
+@mixin font-face($font-family, $url, $weight) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: local("#{$font-family}"), local("#{$font-family}"), url("../fonts/#{$url}.woff2") format("woff2"),
+      url("../#{$url}.woff") format("woff");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+@include font-face("Roboto", "roboto-300", 300);
+@include font-face("Roboto", "roboto-regular", 400);
+@include font-face("Roboto", "roboto-700", 700);
