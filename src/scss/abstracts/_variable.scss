@@ -1,16 +1,34 @@
 //color
+$background-black1: #17141a;
+$background-black2: #212629;
+$background-partners: #d8d8d8;
+$color-green: #33b9bd;
+$header-background: rgba(28, 28, 34, 0.5);
 
 //gradient
-$gradient-yellowGreen: linear-gradient(90deg, #a7c939, #d8d823);
-$scroll-line: linear-gradient(#758d25, #f6fa2a);
-$intro-gradient: radial-gradient(circle, #b1afcc4d 0%, #2d2d2d 58%);
+$background-gradient1: linear-gradient(296.57deg, #17141a 22.63%, #007470 26.94%, #17141a 30.56%);
+$background-gradient2: llinear-gradient(296.57deg, #17141a 53.21%, #007470 57.4%, #17141a 60.77%);
 
-$box-shadow: 0 10px 15px #00000046;
-$text-shadow: 5px 7px 2px rgba(0, 0, 0, 0.2);
+//card
+$card-gradient: linear-gradient(223.4deg, rgba(51, 185, 189, 0) -44.17%, #33b7bb -44.16%, #17141a 21.74%);
+$card-box-shadow: 0px 12px 10px #18181e;
+$card-border-radius: 35px;
+
+$card-elips-gradient: linear-gradient(203.56deg, #33b9bd -31.53%, #18181e 44.02%);
+$border-radius: 25%;
+//text
+// $size-h1: 55px;
+// $size-h2: 45px;
+// $size-subtitle: 25px;
+// $size-mix: 18px;
+$text-hover: #637987;
+$text-color: #fff;
+$text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.47);
+$text-border: 1px;
 
 // $transform: translateX(calc(var(--x) / -30)) translateY(calc(var(--y) / -30));
 // $transform-elX: translateX(calc(var(--x) / 20)) translateY(calc(var(--y) / 20));
 // $transform-el2: translateX(calc(var(--x) / -10)) translateY(calc(var(--y) / -10));
 
-// $cubic-bizie: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+$cubic-bizie: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 // $cubic-8sec: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
