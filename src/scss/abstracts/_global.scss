@@ -15,7 +15,6 @@ body {
         sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: calc(0.5vw + 10px);
     line-height: 1.5;
-
     color: $text-color;
     background: $background-black1;
 }
@@ -62,4 +61,9 @@ a {
 
 .visually-hidden {
     @include visually-hidden;
+}
+
+.list-reset {
+    margin: 0;
+    @include list-reset;
 }

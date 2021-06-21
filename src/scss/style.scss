@@ -8,5 +8,10 @@
 @import "abstracts/global";
 
 @import "layout/header";
+@import "layout/main";
 @import "layout/intro";
+@import "layout/services";
+@import "layout/technologies";
 @import "layout/footer";
+
+@import "components/nav";

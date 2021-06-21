@@ -1,3 +1,30 @@
 .intro {
-    padding-top: 20vw;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    position: relative;
+    background-color: $background-black1;
+    background: url("img/vector.png") no-repeat;
+    background-position: -2% 0;
+
+
+    &__inner {
+        position: relative;
+        width: 50%;
+    }
+
+    &__img {
+        width: 55%;
+        position: absolute;
+        // top: 0;
+        bottom: 0%;
+        right: 5%;
+    }
+
+    &__title {
+        margin-bottom: 10%;
+    }
+
+    &__subtitle {
+        margin-bottom: 18%;
+    }
 }

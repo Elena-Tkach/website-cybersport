@@ -42,7 +42,7 @@
         z-index: -1;
         content: "";
         position: absolute;
-        bottom: 0.8vh;
+        bottom: 0.2vh;
         left: -5px;
         right: -5px;
         height: 0.6vh;
@@ -86,55 +86,60 @@
 //     transition: all 0.6s ease;
 // }
 
-@mixin btn-after($gradient, $background, $right) {
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 7%;
+// @mixin btn-after($gradient, $background, $right) {
+//     // &:after {
+//     //     content: "";
+//     //     position: absolute;
+//     //     top: 0;
+//     //     right: 7%;
 
-        height: 100%;
-        width: 14px;
-        background: url("img/icon/next.svg") no-repeat 50% 50%;
+//     //     height: 100%;
+//     //     width: 14px;
+//     //     background: url("img/icon/next.svg") no-repeat 50% 50%;
 
-        transform: translate3d(-6px, 0, 0);
-        transition: all 0.6s ease;
-        opacity: 0;
-        pointer-events: none;
-    }
+//     //     transform: translate3d(-6px, 0, 0);
+//     //     transition: all 0.6s ease;
+//     //     opacity: 0;
+//     //     pointer-events: none;
+//     // }
 
-    &:before {
-        content: "";
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
+//     &:before {
+//         content: "";
+//         position: absolute;
+//         top: -2px;
+//         left: -2px;
+//         right: -2px;
+//         bottom: -2px;
 
-        background: #{$gradient};
-        border-radius: 40px;
+//         background: #{$gradient};
+//         border-radius: 40px;
 
-        opacity: 0;
-        transition: all 0.6s ease;
-    }
+//         opacity: 0;
+//         transition: all 0.6s ease;
+//     }
 
-    &:hover {
-        color: $nero;
-        padding-right: #{$right};
+//     &:hover {
+//         color: $nero;
+//         padding-right: #{$right};
 
-        background: #{$background};
-        box-shadow: $box-shadow;
+//         background: #{$background};
+//         box-shadow: $box-shadow;
 
-        &:before {
-            opacity: 1;
-        }
+//         &:before {
+//             opacity: 1;
+//         }
 
-        &:after {
-            opacity: 1;
-            transform: translate3d(0, 0, 0);
-            transition-delay: 0.3s;
-        }
-    }
+//         &:after {
+//             opacity: 1;
+//             transform: translate3d(0, 0, 0);
+//             transition-delay: 0.3s;
+//         }
+//     }
+// }
+
+@mixin text-stroke($color) {
+    color: transparent;
+    -webkit-text-stroke: 1px #{$color};
 }
 
 // @mixin title-before {
@@ -154,22 +159,22 @@
 //     }
 // }
 
-@mixin text-before($color) {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    color: #{$color};
-    -webkit-text-stroke: 1px #e4ebee;
-    overflow: hidden;
-}
+// @mixin text-before($color) {
+//     content: attr(data-text);
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 0%;
+//     height: 100%;
+//     color: #{$color};
+//     -webkit-text-stroke: 1px #e4ebee;
+//     overflow: hidden;
+// }
 
 //gradient
-@mixin gradient-text {
-    color: rgb(255, 255, 255);
-    background: linear-gradient(90deg, #a7c939, #d8d823);
+@mixin gradient-text($gradient) {
+    color: $text-color;
+    background: #{$gradient};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

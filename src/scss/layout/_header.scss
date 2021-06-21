@@ -1,4 +1,5 @@
 .header {
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
@@ -18,136 +19,8 @@
         @include outline;
         transition: ease 0.6s;
     }
-
-    &__link-lang {
-        padding: 2px 8px;
-        background-color: transparent;
-        border: 2px solid $text-hover;
-        border-radius: $border-radius;
-
-        @include outline;
-        transition: ease 0.6s;
-    }
-}
-
-.nav {
-    width: 45%;
-    // margin-right: 5%;
-
-    // @include tablet-992 {
-    //     width: 55%;
-    // }
-
-    &__list {
-        @include list-reset;
-    }
-
-    .list--header {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__link {
-        position: relative;
-        @include font-style(0.6vw, 300);
-        @include link-hover;
-
-        transition: all 0.6s;
-    }
 }
 
 .header-visible {
     background-color: $header-background;
-}
-
-.items {
-    position: relative;
-    transition: all 0.6s;
-
-    &__link {
-        @include link-hover;
-    }
-
-    &__span {
-        position: relative;
-        transition: all 0.6s;
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: url("img/icon/arrow1.svg") no-repeat;
-            transition: all 0.6s;
-        }
-
-        &--header {
-            &::before {
-                top: 0%;
-                left: 110%;
-            }
-        }
-
-        &--footer {
-            &::before {
-                top: 0%;
-                left: 0%;
-                transform: translate(70%, -82%) rotate(-90deg);
-            }
-        }
-    }
-
-    .items__list {
-        position: absolute;
-        visibility: hidden;
-        opacity: 0;
-        padding: 0;
-        width: 350px;
-
-        transition: 0.6s ease-in-out;
-
-        &--header {
-            margin-top: 30%;
-            padding-left: 0;
-        }
-
-        &--footer {
-            top: 0;
-            left: 40%;
-        }
-
-        .items__item {
-            padding: 2% 0;
-
-            &::marker {
-                color: $text-hover;
-            }
-        }
-
-        .items__link {
-            position: relative;
-            @include link-hover;
-
-            @include font-style(0.4vw, 400);
-        }
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-        .items__span {
-            color: $text-hover;
-
-            &--header {
-                &::before {
-                    transform: translate(0, 10%);
-                }
-            }
-        }
-
-        .items__list {
-            visibility: visible;
-            opacity: 1;
-        }
-    }
 }

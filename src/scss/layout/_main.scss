@@ -1,0 +1,107 @@
+.title {
+    margin: 0;
+
+    &--font-intro {
+        @include font-style(3vw, 700);
+    }
+
+    &__border--white {
+        color: $text-color;
+        position: relative;
+        @include text-stroke($text-color);
+    }
+
+    &__border--black {
+        @include text-stroke($text-black);
+    }
+
+    &__gradient {
+        color: $text-color;
+        text-transform: uppercase;
+        @include gradient-text($h1-gradient);
+    }
+
+    &--gray-section {
+        text-align: right;
+        color: $text-black;
+        text-transform: uppercase;
+        @include font-style(1.2vw, 700);
+    }
+
+    &--green-section {
+        color: $text-black;
+        @include font-style(2vw, 700);
+    }
+}
+
+.subtitle {
+    color: $text-color;
+    letter-spacing: 2px;
+    margin: 0;
+    padding-right: 20%;
+    @include font-style(0.7vw, 300);
+
+    &--white {
+        color: $text-color;
+    }
+
+    &--black {
+        color: $text-black;
+    }
+}
+
+.button {
+    position: relative;
+    background-color: transparent;
+    @include font-style(0.4vw, 300);
+    text-transform: uppercase;
+    padding: 14px 50px;
+
+    border: 2px solid $color-green;
+    border-radius: 20px;
+    transition: all 0.6s ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0%;
+
+        height: 100%;
+        width: 33px;
+        background: url("img/icon/arrow.svg") no-repeat 50%;
+        background-size: 80%;
+
+        transform: translate3d(6px, 0, 0);
+        transition: all 0.6s ease;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &:hover {
+        color: $color-green;
+        border-color: $text-hover;
+        padding: 14px 30px 14px 80px;
+
+        &::before {
+            opacity: 1;
+            transform: translate3d(26px, 0, 0);
+        }
+    }
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    // &--padding {
+    //     padding: 0 20px;
+    // }
+
+    .text {
+        margin: 0;
+        text-align: center;
+        @include font-style(0.6vw, 400);
+    }
+}

@@ -1,30 +1,41 @@
 //color
-$background-black1: #17141a;
-$background-black2: #212629;
-$background-partners: #d8d8d8;
+$background-black1: #212629;
+$background-grey: #e0e4e7;
+$background-partners: #fcfcfc;
 $color-green: #33b9bd;
+$stroke-green: #bbf0f1;
+$stroke-gray: #e6f8f8;
 $header-background: rgba(28, 28, 34, 0.5);
 
 //gradient
-$background-gradient1: linear-gradient(296.57deg, #17141a 22.63%, #007470 26.94%, #17141a 30.56%);
-$background-gradient2: llinear-gradient(296.57deg, #17141a 53.21%, #007470 57.4%, #17141a 60.77%);
+$background-gradient1: linear-gradient(269.62deg, #ffffff 27.31%, #33b9bd 99.75%);
+// $background-gradient2: linear-gradient(296.57deg, #17141a 53.21%, #007470 57.4%, #17141a 60.77%);
 
-//card
-$card-gradient: linear-gradient(223.4deg, rgba(51, 185, 189, 0) -44.17%, #33b7bb -44.16%, #17141a 21.74%);
-$card-box-shadow: 0px 12px 10px #18181e;
+$gradient-greeen: linear-gradient(to left, #19eaf1, $color-green);
+
+//card-white
+$card-gradient: linear-gradient(223.4deg, #33b7bb -14.16%, #ffffff 29%);
+$card-box-shadow: 0px 12px 10px #b5cacc;
+$card-box-shadow-inset: -4px 4px 5px -4px #33b9bd inset;
+$box-shadow-white-inset: 4px -4px 3px -4px #b5cacc inset;
 $card-border-radius: 35px;
 
-$card-elips-gradient: linear-gradient(203.56deg, #33b9bd -31.53%, #18181e 44.02%);
-$border-radius: 25%;
+//card-black
+$card-technology: linear-gradient(203.56deg, #33b9bd -60%, #212629 43%);
+$card-box-black: 0px 12px 10px #778688;
+$card-box-black-inset: -4px 4px 5px -4px #42e2e7 inset;
+$box-shadow-black-inset: 4px -4px 3px -4px #555c5c inset;
+
+// $card-elips-gradient: linear-gradient(203.56deg, #408688 -31.53%, #18181e 44.02%);
+
 //text
-// $size-h1: 55px;
-// $size-h2: 45px;
-// $size-subtitle: 25px;
-// $size-mix: 18px;
 $text-hover: #637987;
 $text-color: #fff;
-$text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.47);
+$text-black: #212629;
+$trasparent: transparent;
+// $text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
 $text-border: 1px;
+$h1-gradient: radial-gradient(#eff1ff 40%, #000);
 
 // $transform: translateX(calc(var(--x) / -30)) translateY(calc(var(--y) / -30));
 // $transform-elX: translateX(calc(var(--x) / 20)) translateY(calc(var(--y) / 20));

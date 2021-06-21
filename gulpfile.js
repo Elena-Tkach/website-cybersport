@@ -63,13 +63,14 @@ const js = () => {
 
 const images = () => {
     return src(['./src/img/**/*.{jpg,png,svg,ico,gif,webp,mp4}'])
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{ removeViewBox: false }],
-            interlaced: true,
-            optomizationLevel: 2
-        }))
+        // .pipe(imagemin({
+        //     progressive: true,
+        //     svgoPlugins: [{ removeViewBox: false }],
+        //     interlaced: true,
+        //     optomizationLevel: 2
+        // }))
         .pipe(dest('./dist/img'))
+        .pipe(browserSync.stream());
 }
 
 const resources = () => {
@@ -97,7 +98,7 @@ const watchFiles = () => {
     watch('./src/js/**.js', js);
     watch('./src/fonts/*.{woff,woff2}', fonts);
     watch('./src/img/**.svg', svgSprites);
-    // watch('./src/img/**/*.{jpg,png,svg,ico,gif,webp}', images);
+    watch('./src/img/**/*.{jpg,png,svg,ico,gif,webp}', images);
 
 }
 

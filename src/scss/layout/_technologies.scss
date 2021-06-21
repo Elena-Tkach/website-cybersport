@@ -1,0 +1,54 @@
+.technology {
+    background-color: $background-grey;
+
+    padding: 6vh 20px 15vh 20px;
+
+    &__title {
+        margin-bottom: 5%;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__text {
+        padding-top: 120px;
+        color: $text-color;
+
+        &--card1 {
+            background: url(img/svg/teh1.svg) no-repeat top center;
+        }
+
+        &--card2 {
+            background: url(img/svg/teh2.svg) no-repeat center -4px;
+        }
+
+        &--card3 {
+            background: url(img/svg/teh3.svg) no-repeat top center;
+        }
+
+        &--card4 {
+            background: url(img/svg/teh4.svg) no-repeat top center;
+        }
+
+        &--card5 {
+            background: url(img/svg/teh5.svg) no-repeat top center;
+        }
+    }
+
+    .item {
+        &--width {
+            width: 18%;
+        }
+        &--style {
+            border-radius: $card-border-radius;
+            box-shadow: $card-box-black, $card-box-black-inset, $box-shadow-black-inset;
+
+            background: $card-technology;
+        }
+
+        &--padding {
+            padding: 4% 3%;
+        }
+    }
+}
