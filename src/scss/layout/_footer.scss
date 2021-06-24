@@ -1,0 +1,36 @@
+.footer {
+    background: $background-black1;
+    padding: 10vh 0 6vh;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+
+    &__link {
+        width: 20%;
+        @include outline;
+        transition: ease 0.6s;
+        text-align: center;
+    }
+
+    &__nav {
+        width: 20%;
+    }
+
+    &__list {
+        width: 20%;
+        @include list-reset;
+        text-align: right;
+    }
+
+    &__item {
+        margin-bottom: 10%;
+    }
+
+    &__address {
+        text-align: center;
+    }
+}

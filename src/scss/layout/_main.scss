@@ -5,8 +5,15 @@
         @include font-style(3vw, 700);
     }
 
-    &__border--white {
+    &--color-white {
         color: $text-color;
+    }
+
+    &--color-black {
+        color: $text-black;
+    }
+
+    &__border--white {
         position: relative;
         @include text-stroke($text-color);
     }
@@ -16,20 +23,17 @@
     }
 
     &__gradient {
-        color: $text-color;
         text-transform: uppercase;
         @include gradient-text($h1-gradient);
     }
 
     &--gray-section {
         text-align: right;
-        color: $text-black;
         text-transform: uppercase;
         @include font-style(1.2vw, 700);
     }
 
-    &--green-section {
-        color: $text-black;
+    &--font {
         @include font-style(2vw, 700);
     }
 }
@@ -38,7 +42,6 @@
     color: $text-color;
     letter-spacing: 2px;
     margin: 0;
-    padding-right: 20%;
     @include font-style(0.7vw, 300);
 
     &--white {
@@ -52,10 +55,13 @@
 
 .button {
     position: relative;
-    background-color: transparent;
-    @include font-style(0.4vw, 300);
+    background: transparent;
+
+    color: $text-color;
     text-transform: uppercase;
-    padding: 14px 50px;
+    @include font-style(0.3vw, 400);
+
+    padding: 16px 60px;
 
     border: 2px solid $color-green;
     border-radius: 20px;
@@ -79,9 +85,10 @@
     }
 
     &:hover {
-        color: $color-green;
-        border-color: $text-hover;
-        padding: 14px 30px 14px 80px;
+        color: $text-color;
+        border-color: $color-green;
+        padding: 16px 40px 16px 90px;
+        background: $button-hover;
 
         &::before {
             opacity: 1;
@@ -94,10 +101,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
-    // &--padding {
-    //     padding: 0 20px;
-    // }
 
     .text {
         margin: 0;

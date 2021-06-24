@@ -1,0 +1,43 @@
+.payments {
+    padding: 180px 0;
+
+    position: relative;
+    background: $gradient-greeen;
+    box-shadow: $card-box-shadow, $card-shadow;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translatex(0%) translatey(0%) rotate(180deg);
+        background-image: url("img/vector.png");
+        background-repeat: no-repeat;
+    }
+
+    &__inner {
+        position: relative;
+        width: 50%;
+        margin-left: 50%;
+        text-align: right;
+    }
+
+    &__img {
+        @include position-absolute;
+    }
+
+    &__title {
+        margin-bottom: 10%;
+    }
+
+    &__subtitle {
+        margin-bottom: 18%;
+        text-align: right;
+    }
+}

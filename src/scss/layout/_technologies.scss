@@ -1,15 +1,5 @@
 .technology {
-    background-color: $background-grey;
-
-    padding: 6vh 20px 15vh 20px;
-
-    &__title {
-        margin-bottom: 5%;
-    }
-
-    &__item {
-        position: relative;
-    }
+    @include section-grey;
 
     &__text {
         padding-top: 120px;

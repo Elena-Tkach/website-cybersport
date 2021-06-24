@@ -1,17 +1,35 @@
 <section class="payments">
     <div class="payments__image">
         <picture>
-            <img class="payments__img" src="img/payments.png" alt="Ноутбук и разные экраны">
+            <!-- <source media="(max-width: 768px)" srcset="img/thesis/site/mobile@1x.webp 1x,
+            img/thesis/site/mobile@2x.webp 2x"> -->
+
+            <!-- <source media="(max-width: 1024px)" srcset="img/thesis/site/tablet@1x.webp 1x,
+                        img/thesis/site/tablet@2x.webp 2x">
+
+                <source type="image/webp"
+                    srcset="img/thesis/site/desktop@1x.webp 1x, img/thesis/site/desktop@2x.webp 2x">
+
+                <source media="(max-width: 768px)" srcset="img/thesis/site/mobile@1x.jpg 1x,
+                        img/thesis/site/mobile@2x.jpg 2x">
+
+
+                <source media="(max-width: 1024px)" srcset="img/thesis/site/tablet@1x.jpg 1x,
+                        img/thesis/site/tablet@2x.jpg 2x"> -->
+            <img class="payments__img" src="img/payments.png" srcset="img/payments.png" alt="Ноутбук и разные экраны">
         </picture>
     </div>
 
     <div class="container">
-        <h2 class="payments__title title">
-            Полный спектр решений
-            для онлайн-платежей
-        </h2>
-        <p class="payments__subtitle subtitle">КиберСпорт предлагает гибкую
-            платформу для обработки онлайн-платежей.
-        </p>
+        <div class="payments__inner">
+            <h2 class="payments__title title title--color-black title--font">
+                Полный спектр решений
+                для онлайн-платежей
+            </h2>
+            <p class="payments__subtitle subtitle subtitle--black">КиберСпорт предлагает гибкую
+                платформу для обработки онлайн-платежей.
+            </p>
+        </div>
+
     </div>
 </section>

@@ -73,103 +73,24 @@
         outline: none;
     }
 }
-// @mixin button {
-//     position: relative;
-
-//     border: 2px solid transparent;
-//     background-color: transparent;
-//     border-radius: 40px;
-
-//     text-transform: uppercase;
-
-//     cursor: pointer;
-//     transition: all 0.6s ease;
-// }
-
-// @mixin btn-after($gradient, $background, $right) {
-//     // &:after {
-//     //     content: "";
-//     //     position: absolute;
-//     //     top: 0;
-//     //     right: 7%;
-
-//     //     height: 100%;
-//     //     width: 14px;
-//     //     background: url("img/icon/next.svg") no-repeat 50% 50%;
-
-//     //     transform: translate3d(-6px, 0, 0);
-//     //     transition: all 0.6s ease;
-//     //     opacity: 0;
-//     //     pointer-events: none;
-//     // }
-
-//     &:before {
-//         content: "";
-//         position: absolute;
-//         top: -2px;
-//         left: -2px;
-//         right: -2px;
-//         bottom: -2px;
-
-//         background: #{$gradient};
-//         border-radius: 40px;
-
-//         opacity: 0;
-//         transition: all 0.6s ease;
-//     }
-
-//     &:hover {
-//         color: $nero;
-//         padding-right: #{$right};
-
-//         background: #{$background};
-//         box-shadow: $box-shadow;
-
-//         &:before {
-//             opacity: 1;
-//         }
-
-//         &:after {
-//             opacity: 1;
-//             transform: translate3d(0, 0, 0);
-//             transition-delay: 0.3s;
-//         }
-//     }
-// }
 
 @mixin text-stroke($color) {
     color: transparent;
     -webkit-text-stroke: 1px #{$color};
 }
 
-// @mixin title-before {
-//     &:before {
-//         content: "";
-//         width: 40px;
-//         height: 3px;
-//         background: #fff;
-//         display: inline-block;
-//         margin-right: 15px;
-//         vertical-align: middle;
+@mixin section-grey {
+    background-color: $background-grey;
+    padding: 6vh 0 15vh;
 
-//         @include tablet-768 {
-//             width: 30px;
-//             margin-right: 10px;
-//         }
-//     }
-// }
+    &__title {
+        margin-bottom: 5%;
+    }
 
-// @mixin text-before($color) {
-//     content: attr(data-text);
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 0%;
-//     height: 100%;
-//     color: #{$color};
-//     -webkit-text-stroke: 1px #e4ebee;
-//     overflow: hidden;
-// }
+    &__item {
+        position: relative;
+    }
+}
 
 //gradient
 @mixin gradient-text($gradient) {
@@ -219,5 +140,25 @@
 @mixin mobile-425 {
     @media (min-width: 425px) {
         @content;
+    }
+}
+
+//animation
+@keyframes partners-animation {
+    0% {
+        opacity: 0;
+        transform: rotate(0.001deg) translate3d(1685px, 10px, 0);
+    }
+    5%,
+    95% {
+        opacity: 0;
+    }
+    6%,
+    94% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(0.001deg) translate3d(-1685px, 10px, 0);
     }
 }

@@ -1,15 +1,6 @@
 .services {
-    background-color: $background-grey;
 
-    padding: 6vh 0 15vh;
-
-    &__title {
-        margin-bottom: 5%;
-    }
-
-    &__item {
-        position: relative;
-    }
+    @include section-grey;
 
     &__link {
         @include position-absolute;
@@ -60,14 +51,6 @@
     .item {
         &--width {
             width: 22%;
-
-            // @include laptopM-1200 {
-            //     height: 300px;
-            // }
-
-            // @include laptopM-1440 {
-            //     height: 400px;
-            // }
         }
         &--style {
             border-radius: $card-border-radius;
