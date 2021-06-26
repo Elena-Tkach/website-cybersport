@@ -55,9 +55,10 @@
 
 .button {
     position: relative;
-    background: transparent;
 
     color: $text-color;
+    background-color: transparent;
+    // background-color: $background-black1;
     text-transform: uppercase;
     @include font-style(0.3vw, 400);
 
@@ -85,10 +86,11 @@
     }
 
     &:hover {
-        color: $text-color;
-        border-color: $color-green;
-        padding: 16px 40px 16px 90px;
-        background: $button-hover;
+        color: $color-green;
+
+        border-color: $header-background;
+        box-shadow: -6px 6px 20px 0px rgba(5, 5, 5, 0.822);
+        padding: 16px 50px 16px 90px;
 
         &::before {
             opacity: 1;
@@ -106,5 +108,26 @@
         margin: 0;
         text-align: center;
         @include font-style(0.6vw, 400);
+    }
+}
+
+.background {
+    z-index: -1;
+    overflow: hidden;
+    @include position-absolute;
+    position: fixed;
+    // background-image: url("img/busines-foun.jpg");
+    background-image: url("img/intro-foun.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .overlay {
+        // z-index: -1;
+        @include position-absolute;
+        width: 100%;
+        height: 100%;
+
+        background: rgba(6, 6, 6, 0.7);
     }
 }

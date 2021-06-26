@@ -21,6 +21,10 @@
         background-repeat: no-repeat;
     }
 
+    &__background {
+        z-index: -1;
+    }
+
     &__inner {
         position: relative;
         width: 50%;

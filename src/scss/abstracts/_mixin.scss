@@ -53,7 +53,9 @@
         transform-origin: left center;
     }
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
         color: $text-hover;
         &:before {
             transform: scaleX(1);

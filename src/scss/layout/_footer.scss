@@ -11,6 +11,7 @@
 
     &__link {
         width: 20%;
+        margin-right: 5%;
         @include outline;
         transition: ease 0.6s;
         text-align: center;
@@ -20,17 +21,39 @@
         width: 20%;
     }
 
-    &__list {
-        width: 20%;
-        @include list-reset;
-        text-align: right;
+    &__item {
+        margin-bottom: 10%;
     }
+}
+
+.other {
+    width: 15%;
+
+    @include font-style(0.4vw, 300);
+    @include list-reset;
+    text-align: right;
 
     &__item {
         margin-bottom: 10%;
     }
 
-    &__address {
-        text-align: center;
+    &__link {
+        transition: all 0.6s;
+        &:hover {
+            color: $text-hover;
+            box-shadow: 1px 5px 0px -2px $color-green;
+        }
+    }
+}
+
+.address {
+    text-align: center;
+    font-style: normal;
+    margin-bottom: 20px;
+    &__list {
+        @include font-style(0.4vw, 300);
+        @include list-reset;
+        color: $text-hover;
+        letter-spacing: 1.5px;
     }
 }
