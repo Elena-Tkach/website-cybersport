@@ -1,34 +1,66 @@
 .business {
     position: relative;
-
     display: flex;
-    // justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet-768 {
+        flex-direction: row;
+    }
 
     &__inner {
-        margin: 180px 5% 180px 10%;
+        order: 2;
+        @include bock-blur;
+        width: 90%;
+        margin: 5%;
+        padding: 10% 5% 5% 5%;
+        text-align: center;
 
-        position: relative;
-        width: 48%;
-        padding: 20px;
-        backdrop-filter: blur(14px);
-        // border-radius: $card-border-radius;
-        border: 1px solid rgba(156, 156, 156, 0.09);
-        border-right: 1px solid rgba(114, 111, 111, 0.05);
-        border-bottom: 1px solid rgba(117, 117, 117, 0.05);
-        box-shadow: 0 10px 15px #00000070;
+        @include tablet-768 {
+            order: 1;
+
+            position: relative;
+            width: 48%;
+
+            text-align: start;
+        }
+
+        @include tablet-992 {
+            margin: 0px 5% 0 10%;
+        }
     }
 
     &__image {
-        width: 50%;
+        order: 1;
+        width: 100%;
+        padding: 30%;
+
         position: relative;
-        padding: 180px 0;
+
         background-color: $background-black1;
+
+        @include tablet-768 {
+            order: 2;
+            width: 50%;
+            padding: 40% 0;
+        }
+
+        @include tablet-992 {
+            padding: 30% 0;
+        }
     }
 
     &__img {
         position: absolute;
-        top: 0;
-        right: 15%;
+        width: 60%;
+        top: 50%;
+        left: 0;
+        transform: translate(35%, -40%);
+
+        @include tablet-768 {
+            transform: translate(-10%, -50%);
+            width: 100%;
+        }
     }
 
     &__title {

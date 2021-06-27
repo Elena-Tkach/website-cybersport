@@ -2,7 +2,12 @@
     margin: 0;
 
     &--font-intro {
-        @include font-style(3vw, 700);
+        // text-align: center;
+        @include font-style(5vw, 700);
+
+        @include tablet-768 {
+            @include font-style(3vw, 700);
+        }
     }
 
     &--color-white {
@@ -16,6 +21,10 @@
     &__border--white {
         position: relative;
         @include text-stroke($text-color);
+
+        @include mobile-567 {
+            margin-right: 5%;
+        }
     }
 
     &__border--black {
@@ -34,7 +43,11 @@
     }
 
     &--font {
-        @include font-style(2vw, 700);
+        @include font-style(3vw, 700);
+
+        @include tablet-768 {
+            @include font-style(2vw, 700);
+        }
     }
 }
 
@@ -42,7 +55,11 @@
     color: $text-color;
     letter-spacing: 2px;
     margin: 0;
-    @include font-style(0.7vw, 300);
+    @include font-style(1vw, 300);
+
+    @include tablet-768 {
+        @include font-style(0.7vw, 300);
+    }
 
     &--white {
         color: $text-color;
@@ -90,7 +107,7 @@
 
         border-color: $header-background;
         box-shadow: -6px 6px 20px 0px rgba(5, 5, 5, 0.822);
-        padding: 16px 50px 16px 90px;
+        padding: 16px 30px 16px 90px;
 
         &::before {
             opacity: 1;
@@ -106,8 +123,18 @@
 
     .text {
         margin: 0;
+        margin: 0 5% 5% 5%;
         text-align: center;
-        @include font-style(0.6vw, 400);
+        @include font-style(1.2vw, 400);
+
+        @include tablet-992 {
+            @include font-style(0.7vw, 400);
+        }
+
+        @include laptopM-1200 {
+            margin: 0 0 5% 0;
+            @include font-style(0.5vw, 400);
+        }
     }
 }
 

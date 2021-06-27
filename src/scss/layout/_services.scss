@@ -1,6 +1,6 @@
 .services {
-
     @include section-grey;
+    transition: all 0.6s ease-in-out;
 
     &__link {
         @include position-absolute;
@@ -21,14 +21,18 @@
             background-image: url("img/svg/card4.svg");
         }
 
-        background-size: 60%;
+        background-size: 40%;
         background-position: center center;
         background-repeat: no-repeat;
+
+        @include mobile-567 {
+            background-size: 60%;
+        }
     }
 
     &__text {
         padding-top: 120px;
-        margin-bottom: 20px;
+        margin: 0 5% 5% 5%;
         color: $text-black;
 
         &--card1 {
@@ -49,8 +53,20 @@
     }
 
     .item {
+        margin-bottom: 8%;
+        transition: all 0.6s ease-in-out;
+
         &--width {
-            width: 22%;
+            width: 80%;
+
+            @include mobile-567 {
+                width: 40%;
+                margin-bottom: 5%;
+            }
+
+            @include laptopM-1200 {
+                width: 22%;
+            }
         }
         &--style {
             border-radius: $card-border-radius;
@@ -65,7 +81,15 @@
         }
 
         &--padding {
-            padding: 6% 3%;
+            padding: 8% 3%;
+
+            @include tablet-992 {
+                padding: 6% 3%;
+            }
+
+            @include laptopM-1200 {
+                padding: 5% 3%;
+            }
         }
 
         &:hover {

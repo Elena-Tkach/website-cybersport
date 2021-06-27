@@ -1,21 +1,53 @@
 .intro {
-    padding-top: 280px;
-    padding-bottom: 200px;
+    padding-top: 180px;
+    padding-bottom: 100px;
+    transition: all 0.6s ease;
+
     position: relative;
     // background-color: $background-black1;
     // background: url("img/vector.png") no-repeat;
     // background-position: -2% 0;
 
+    @include tablet-768 {
+        padding-top: 180px;
+        padding-bottom: 100px;
+        // padding-top: 280px;
+        // padding-bottom: 200px;
+    }
+
+    @include laptopM-1200 {
+        padding-top: 280px;
+        padding-bottom: 200px;
+    }
+
     &__inner {
+        width: 100%;
         position: relative;
-        width: 50%;
+        text-align: center;
+        transition: all 0.6s ease;
+
+        @include tablet-768 {
+            text-align: start;
+            width: 50%;
+        }
     }
 
     &__img {
-        width: 55%;
+        display: none;
         position: absolute;
+        width: 55%;
         bottom: 0%;
-        right: 5%;
+        right: 2%;
+        transition: all 0.6s ease;
+
+        @include tablet-768 {
+            display: block;
+            width: 65%;
+        }
+
+        @include laptopM-1200 {
+            width: 55%;
+        }
     }
 
     &__title {
