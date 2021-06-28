@@ -27,11 +27,15 @@
 }
 
 .other {
-    width: 15%;
+    width: 25%;
 
     @include font-style(0.4vw, 300);
     @include list-reset;
     text-align: right;
+
+    @include tablet-992 {
+        width: 15%;
+    }
 
     &__item {
         margin-bottom: 10%;

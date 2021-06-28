@@ -45,8 +45,9 @@
         bottom: 0.2vh;
         left: -5px;
         right: -5px;
-        height: 0.6vh;
+        height: 0.3vh;
         background: $color-green;
+        // box-shadow: 0px 0px 6px 0px #2ef8ff;
 
         transform: scaleX(0);
         transition: $cubic-bizie;
