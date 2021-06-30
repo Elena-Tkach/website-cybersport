@@ -9,14 +9,12 @@
     // background-position: -2% 0;
 
     @include tablet-768 {
-        padding-top: 180px;
+        padding-top: 200px;
         padding-bottom: 100px;
-        // padding-top: 280px;
-        // padding-bottom: 200px;
     }
 
     @include laptopM-1200 {
-        padding-top: 280px;
+        padding-top: 35vh;
         padding-bottom: 200px;
     }
 

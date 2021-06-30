@@ -2,7 +2,18 @@
     <div class="container">
         <div class="header__inner">
             <a href="index.html" class="header__link">
-                <img class="header__logo" src="img/logo/logo_rus@1x.png" alt="logo">
+                <picture>
+                    <source media="(min-width: 992px)" srcset="img/logo/logo_rus@1x.webp 1x,
+                        img/logo/logo_rus@1x.webp 2x">
+                    <source type="image/webp"
+                        srcset="img/logo/logo_mobile_rus@1x.webp 1x, img/logo/logo_mobile_rus@1x.webp 2x">
+
+
+                    <source media="(min-width: 992px)" srcset="img/logo/logo_rus@1x.png 1x,
+                        img/logo/logo_rus@1x.png 2x">
+                    <img class="header__logo" src="img/logo/logo_mobile_rus@1x.png"
+                        srcset="img/logo/logo_mobile_rus@1x.png" alt="logo">
+                </picture>
             </a>
 
             <nav class="header__nav nav">
