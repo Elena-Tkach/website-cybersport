@@ -79,8 +79,7 @@
 
         &:hover {
             border: 2px solid $color-green;
-            // box-shadow: $card-shadow-glass;
-            box-shadow: $card-box-shadow;
+            box-shadow: $card-shadow-glass;
         }
 
         @include mobile-567 {

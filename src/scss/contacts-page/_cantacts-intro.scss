@@ -1,0 +1,76 @@
+.contacts {
+    position: relative;
+    padding-top: 25vh;
+    padding-bottom: 15vh;
+
+    background: $gradient-contacts-page;
+    transition: all 0.6s ease;
+
+    &::before {
+        z-index: 2;
+        content: "";
+        @include position-absolute;
+
+        background-image: url("img/contacts-page/iang.png");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 100%;
+
+        @include tablet-768 {
+            background-size: contain;
+        }
+    }
+
+    @include tablet-768 {
+        padding-top: 30vh;
+        padding-bottom: 10vh;
+    }
+
+    // @include laptopM-1200 {
+    //     padding-top: 25vh;
+    //     padding-bottom: 15vh;
+    // }
+
+    &__inner {
+        position: relative;
+        z-index: 2;
+        // width: 100%;
+
+        @include tablet-768 {
+            width: 55%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10%;
+    }
+
+    &__address {
+        margin-bottom: 20px;
+    }
+}
+
+.address {
+    &__subtitle {
+        margin-bottom: 10%;
+        width: 80%;
+
+        @include tablet-768 {
+            width: 100%;
+        }
+
+        &--span {
+            margin-right: 80%;
+            text-transform: uppercase;
+
+            // @include tablet-768 {
+            //     margin-right: 80%;
+            // }
+        }
+    }
+
+    &__link {
+        position: relative;
+        @include link-hover;
+    }
+}

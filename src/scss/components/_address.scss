@@ -1,0 +1,33 @@
+.address {
+    font-style: normal;
+
+    &__list {
+        @include list-reset;
+        letter-spacing: 1.5px;
+
+        &--footer {
+            text-align: center;
+            color: $text-hover;
+            @include font-style(0.4vw, 400);
+        }
+
+        &--contacts {
+            @include font-style(1vw, 300);
+
+            @include tablet-768 {
+                @include font-style(0.7vw, 300);
+            }
+        }
+    }
+
+    &__item {
+        &--contacts {
+            margin-bottom: 2%;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        color: $color-green;
+    }
+}
