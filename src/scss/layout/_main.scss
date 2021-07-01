@@ -35,7 +35,7 @@
         text-transform: uppercase;
     }
 
-    &__gradient {
+    &--gradient {
         @include gradient-text($h1-gradient);
     }
 
@@ -54,7 +54,8 @@
     }
 }
 
-.subtitle {
+.subtitle,
+.text {
     color: $text-color;
     letter-spacing: 2px;
     margin: 0;
@@ -70,6 +71,11 @@
 
     &--black {
         color: $text-black;
+    }
+
+    &__span {
+        font-weight: 400;
+        text-transform: uppercase;
     }
 }
 
@@ -137,6 +143,20 @@
         @include laptopM-1200 {
             margin: 0 0 5% 0;
             @include font-style(0.5vw, 400);
+        }
+
+        &--circle {
+            margin: 0;
+            width: 80%;
+            @include font-style(0.1vw, 300);
+
+            @include mobile-425 {
+                @include font-style(0.01vw, 300);
+            }
+
+            @include tablet-768 {
+                @include font-style(0.3vw, 300);
+            }
         }
     }
 }

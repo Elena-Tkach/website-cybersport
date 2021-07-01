@@ -1,7 +1,7 @@
-.payments {
+.presentation {
     position: relative;
     background: $gradient-greeen-mobile;
-    box-shadow: $card-box-shadow, $card-shadow;
+    // box-shadow: $card-box-shadow, $card-shadow;
 
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     }
 
     @include laptopM-1200 {
-        padding: 280px 0 40vh;
+        padding: 30vh 0 20vh;
     }
 
     &::before {
@@ -36,7 +36,6 @@
     }
 
     &__inner {
-        // order: 2;
         position: relative;
         margin-top: 70%;
         width: 100%;
@@ -56,11 +55,7 @@
             margin-top: 0;
             margin-left: 50%;
 
-            text-align: right;
-
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
+            text-align: left;
         }
     }
 
@@ -69,7 +64,6 @@
 
         width: 50%;
         transform: translate(40%, 0%);
-        // padding: 30% 0 40% 0;
 
         @include tablet-768 {
             top: 50%;
@@ -78,11 +72,8 @@
         }
     }
 
-    &__title {
-        margin-bottom: 10%;
-    }
-
     &__text {
+        
         margin-bottom: 18%;
 
         @include tablet-768 {

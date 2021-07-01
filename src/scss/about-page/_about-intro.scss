@@ -1,4 +1,4 @@
-.intro {
+.about {
     position: relative;
     padding-top: 180px;
     padding-bottom: 100px;
@@ -10,8 +10,8 @@
     }
 
     @include laptopM-1200 {
-        padding-top: 35vh;
-        padding-bottom: 200px;
+        padding-top: 30vh;
+        padding-bottom: 150px;
     }
 
     &__inner {
@@ -42,7 +42,7 @@
         margin-bottom: 10%;
     }
 
-    &__subtitle {
+    &__text {
         margin-bottom: 18%;
     }
 }

@@ -1,0 +1,64 @@
+.experience {
+    @include section-grey;
+
+    transition: all 0.6s ease;
+
+    &__list {
+        margin-bottom: 20px;
+        @include tablet-992 {
+            flex-wrap: nowrap;
+        }
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 5%;
+        margin-right: 2%;
+
+        transition: all 0.6s ease-in-out;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--width {
+            width: 150px;
+            height: 150px;
+
+            @include tablet-768 {
+                width: 200px;
+                height: 200px;
+            }
+
+            @include laptopM-1200 {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        &--style {
+            border-radius: 100%;
+            box-shadow: $card-box-black, $card-box-black-inset, $box-shadow-black-inset;
+
+            background: $card-technology;
+        }
+    }
+}
+
+.number {
+    @include font-style(4vw, 700);
+
+    @include mobile-425 {
+        @include font-style(3vw, 700);
+    }
+
+    @include tablet-768 {
+        @include font-style(3vw, 700);
+    }
+    &--border-blue {
+        @include text-stroke($text-color);
+    }
+}
