@@ -1,13 +1,13 @@
 .partners {
     background-color: $background-partners;
 
-    padding: 10vh 0 10vh;
+    padding: 10vh 0 5vh;
     position: relative;
     transition: 0.6s ease-in-out;
 
-    // @include tablet-768 {
-    //     padding: 10vh 0 10vh;
-    // }
+    @include tablet-768 {
+        padding: 10vh 0 10vh;
+    }
 
     // &::before {
     //     content: "";

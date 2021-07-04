@@ -1,4 +1,4 @@
-.about {
+.services-intro {
     text-align: center;
     position: relative;
     padding-top: 180px;
@@ -29,6 +29,7 @@
     }
 
     &__img {
+        width: 40%;
         display: none;
         position: absolute;
         top: 50%;

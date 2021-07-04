@@ -1,39 +1,82 @@
 .advantages {
-    padding: 130px 0 130px;
     background-color: $background-black1;
+    padding: 10vh 0;
+    transition: all 0.6s ease-in-out;
 
-    &__list {
-        padding: 20px 0 20px;
-        background-image: url("img/kibersport.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
+    @include mobile-425 {
+        padding: 130px 0 50px;
     }
 
-    &__item {
-        width: 50%;
-        &:nth-child(-n + 2) {
-            margin-bottom: 30%;
-        }
-
-        &:nth-child(odd) {
-            text-align: start;
-            .advantages__text {
-                margin-right: 50%;
-            }
-        }
-
-        &:nth-child(even) {
-            text-align: end;
-
-            .advantages__text {
-                margin-left: 40%;
-            }
-        }
+    @include tablet-768 {
+        padding: 130px 0 130px;
     }
 
     &__title {
         margin-bottom: 10%;
+        text-align: center;
+        transition: all 0.6s ease-in-out;
+
+        @include tablet-768 {
+            text-align: start;
+        }
+    }
+
+    &__list {
+        flex-direction: row;
+        padding: 50% 0 20px;
+        justify-content: space-between;
+
+        background-image: url("img/kiber-mobile.png");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 40%;
+
+        transition: all 0.6s ease-in-out;
+
+        @include tablet-768 {
+            padding: 20px 0 20px;
+
+            background-image: url("img/kibersport.png");
+            background-position: center;
+            background-size: 100%;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        margin-bottom: 10%;
+        text-align: center;
+
+        transition: all 0.6s ease-in-out;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include mobile-425 {
+            width: 48%;
+        }
+
+        @include tablet-768 {
+            &:nth-child(-n + 2) {
+                margin-bottom: 30%;
+            }
+
+            &:nth-child(odd) {
+                text-align: start;
+                .advantages__text {
+                    margin-right: 50%;
+                }
+            }
+
+            &:nth-child(even) {
+                text-align: end;
+
+                .advantages__text {
+                    margin-left: 40%;
+                }
+            }
+        }
     }
 
     &__subtitle {
