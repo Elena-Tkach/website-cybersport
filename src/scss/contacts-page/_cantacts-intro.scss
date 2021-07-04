@@ -63,9 +63,9 @@
             margin-right: 80%;
             text-transform: uppercase;
 
-            // @include tablet-768 {
-            //     margin-right: 80%;
-            // }
+            @include tablet-768 {
+                margin-right: 90%;
+            }
         }
     }
 

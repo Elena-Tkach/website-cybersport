@@ -1,8 +1,56 @@
-.advantage {
+.advantages {
+    padding: 130px 0 130px;
     background-color: $background-black1;
 
-    background-image: url("img/kibersport.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
+    &__list {
+        padding: 20px 0 20px;
+        background-image: url("img/kibersport.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+    }
+
+    &__item {
+        width: 50%;
+        &:nth-child(-n + 2) {
+            margin-bottom: 30%;
+        }
+
+        &:nth-child(odd) {
+            text-align: start;
+            .advantages__text {
+                margin-right: 50%;
+            }
+        }
+
+        &:nth-child(even) {
+            text-align: end;
+
+            .advantages__text {
+                margin-left: 40%;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 10%;
+    }
+
+    &__subtitle {
+        margin: 0;
+        color: $text-color;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        @include font-style(0.7vw, 700);
+
+        // @include tablet-768 {
+        //     @include font-style(0.7vw, 300);
+        // }
+    }
+
+    &__text {
+        letter-spacing: 2px;
+        color: $text-color;
+        @include font-style(0.5vw, 300);
+    }
 }

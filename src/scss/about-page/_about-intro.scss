@@ -1,10 +1,12 @@
 .about {
+    text-align: center;
     position: relative;
     padding-top: 180px;
     padding-bottom: 100px;
     transition: all 0.6s ease;
 
     @include tablet-768 {
+        text-align: start;
         padding-top: 200px;
         padding-bottom: 100px;
     }
@@ -17,24 +19,28 @@
     &__inner {
         width: 100%;
         position: relative;
-        text-align: center;
+
         transition: all 0.6s ease;
 
         @include tablet-768 {
-            text-align: start;
             width: 50%;
+            text-align: start;
         }
     }
 
     &__img {
         display: none;
         position: absolute;
-        bottom: 0%;
-        right: 2%;
-        transition: all 0.6s ease;
+        top: 50%;
+        left: 50%;
+        transform: translate(0%, -50%);
 
         @include tablet-768 {
             display: block;
+        }
+
+        @include laptopM-1440 {
+            transform: translate(10%, -50%);
         }
     }
 

@@ -9,13 +9,13 @@
     width: 100%;
 
     @include tablet-768 {
-        padding: 180px 0;
+        padding: 120px 0;
         flex-direction: row;
         background: $gradient-greeen;
     }
 
     @include laptopM-1200 {
-        padding: 30vh 0 20vh;
+        padding: 30vh 0 30vh;
     }
 
     &::before {
@@ -37,23 +37,19 @@
 
     &__inner {
         position: relative;
-        margin-top: 70%;
+        margin-top: 60%;
         width: 100%;
 
         text-align: center;
 
         @include mobile-425 {
-            margin-top: 60%;
-        }
-
-        @include mobile-567 {
-            margin-top: 75%;
+            margin-top: 40%;
         }
 
         @include tablet-768 {
-            width: 50%;
+            width: 60%;
             margin-top: 0;
-            margin-left: 50%;
+            margin-left: 40%;
 
             text-align: left;
         }
@@ -61,19 +57,25 @@
 
     &__img {
         @include position-absolute;
+        top: 1%;
+        left: 50%;
 
-        width: 50%;
-        transform: translate(40%, 0%);
+        transform: translate(-50%, 0%);
 
         @include tablet-768 {
             top: 50%;
-            width: 40%;
-            transform: translate(0%, -60%);
+            left: 0;
+
+            transform: translate(30%, -50%);
+        }
+
+        @include laptopM-1440 {
+            // left: 10%;
+            transform: translate(50%, -40%);
         }
     }
 
     &__text {
-        
         margin-bottom: 18%;
 
         @include tablet-768 {
