@@ -7,62 +7,20 @@
         position: relative;
         z-index: 1;
         @include link-hover;
-        
     }
 
     &__link {
         @include position-absolute;
-
-        &--card1 {
-            background-size: 100%;
-            background-image: url("img/svg/card1.svg");
-        }
-
-        &--card2 {
-            background-image: url("img/svg/card2.svg");
-        }
-
-        &--card3 {
-            background-image: url("img/svg/card3.svg");
-        }
-        &--card4 {
-            background-image: url("img/svg/card4.svg");
-        }
-
-        background-size: 40%;
-        background-position: center center;
-        background-repeat: no-repeat;
-
-        @include mobile-567 {
-            background-size: 60%;
-        }
     }
 
     &__text {
         padding-top: 120px;
         margin: 0 5% 5% 5%;
         color: $text-black;
-
-        &--card1 {
-            background: url(img/svg/pay1.svg) no-repeat top center;
-        }
-
-        &--card2 {
-            background: url(img/svg/pay2.svg) no-repeat center -4px;
-        }
-
-        &--card3 {
-            background: url(img/svg/pay3.svg) no-repeat top center;
-        }
-
-        &--card4 {
-            background: url(img/svg/pay4.svg) no-repeat top center;
-        }
     }
 
     .item {
         margin-bottom: 8%;
-        transition: all 0.6s ease-in-out;
 
         &--width {
             width: 80%;
@@ -81,10 +39,20 @@
             box-shadow: $card-box-shadow, $card-box-shadow-inset, $box-shadow-white-inset;
 
             background: $card-gradient;
+        }
 
-            &:hover {
+        &--hover-gradient {
+            &:hover,
+            &:active,
+            &:focus {
                 border-radius: $card-border-radius;
                 background: $card-technology;
+            }
+        }
+
+        &:hover {
+            .text {
+                color: $text-color;
             }
         }
 
@@ -99,11 +67,48 @@
                 padding: 5% 3%;
             }
         }
+    }
+}
 
-        &:hover {
-            .text {
-                color: $text-color;
-            }
-        }
+.bg {
+    &-card1 {
+        background-size: 100%;
+        background-image: url("img/svg/card1.svg");
+    }
+
+    &-card2 {
+        background-image: url("img/svg/card2.svg");
+    }
+
+    &-card3 {
+        background-image: url("img/svg/card3.svg");
+    }
+    &-card4 {
+        background-image: url("img/svg/card4.svg");
+    }
+    background-size: 40%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @include mobile-567 {
+        background-size: 60%;
+    }
+}
+
+.icon {
+    &--1 {
+        background: url(img/svg/pay1.svg) no-repeat top center;
+    }
+
+    &--2 {
+        background: url(img/svg/pay2.svg) no-repeat center -4px;
+    }
+
+    &--3 {
+        background: url(img/svg/pay3.svg) no-repeat top center;
+    }
+
+    &--4 {
+        background: url(img/svg/pay4.svg) no-repeat top center;
     }
 }

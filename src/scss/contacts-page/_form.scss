@@ -117,13 +117,6 @@
 
     &__btn {
         margin-bottom: 5%;
-        &:hover,
-        &:active,
-        &:focus {
-            border: 1px solid $color-green;
-            // background-color: $background-black1;
-            box-shadow: 0 10px 15px #0505057c;
-        }
     }
 
     .placeholder {

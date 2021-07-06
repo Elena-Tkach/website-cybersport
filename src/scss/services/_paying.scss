@@ -1,0 +1,81 @@
+.paying {
+    position: relative;
+    @include section-grey;
+    transition: all 0.6s ease-in-out;
+    padding: 6vh 0 0;
+
+    &__title {
+        margin-bottom: 5%;
+    }
+
+    &__btn {
+        border: none;
+        border-radius: $card-border-radius;
+        box-shadow: $card-box-shadow, $card-box-shadow-inset, $box-shadow-white-inset;
+
+        background: $card-gradient;
+        width: 100%;
+        height: 100%;
+
+        padding: 20% 12%;
+        transition: all 0.6s ease-in-out;
+
+        // &:hover {
+        //     background: $card-gradient;
+        //     border-bottom-left-radius: 0;
+        //     border-bottom-right-radius: 0;
+        //     // height: 140%;
+
+        //     box-shadow: 2px -8px 10px #0000005b, $card-box-shadow-inset, $box-shadow-white-inset;
+
+        //     .paying__text {
+        //         color: $text-color;
+        //         font-weight: 700;
+        //     }
+        // }
+    }
+
+    &__text {
+        padding-top: 120px;
+        margin: 0 5% 5% 5%;
+        color: $text-black;
+        transition: all 0.6s ease-in-out;
+    }
+
+    .item {
+        margin-bottom: 8%;
+        transition: all 0.6s ease-in-out;
+
+        &--width {
+            width: 80%;
+
+            @include mobile-567 {
+                width: 40%;
+                margin-bottom: 2%;
+            }
+
+            @include laptopM-1200 {
+                width: 22%;
+            }
+        }
+    }
+}
+
+.open {
+    transform: translate(0%, 11%);
+    transition: all 0.6s ease-in-out;
+
+    .paying__btn {
+        background: $card-technology;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        // height: 140%;
+
+        box-shadow: 2px -8px 10px #0000005b, $card-box-shadow-inset, $box-shadow-white-inset;
+    }
+
+    .paying__text {
+        color: $text-color;
+        font-weight: 700;
+    }
+}
