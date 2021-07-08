@@ -70,45 +70,4 @@
     }
 }
 
-.bg {
-    &-card1 {
-        background-size: 100%;
-        background-image: url("img/svg/card1.svg");
-    }
 
-    &-card2 {
-        background-image: url("img/svg/card2.svg");
-    }
-
-    &-card3 {
-        background-image: url("img/svg/card3.svg");
-    }
-    &-card4 {
-        background-image: url("img/svg/card4.svg");
-    }
-    background-size: 40%;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    @include mobile-567 {
-        background-size: 60%;
-    }
-}
-
-.icon {
-    &--1 {
-        background: url(img/svg/pay1.svg) no-repeat top center;
-    }
-
-    &--2 {
-        background: url(img/svg/pay2.svg) no-repeat center -4px;
-    }
-
-    &--3 {
-        background: url(img/svg/pay3.svg) no-repeat top center;
-    }
-
-    &--4 {
-        background: url(img/svg/pay4.svg) no-repeat top center;
-    }
-}

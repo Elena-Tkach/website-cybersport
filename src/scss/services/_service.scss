@@ -1,45 +1,61 @@
 .service {
     position: relative;
-    height: 700px;
-    min-height: 550px;
     display: flex;
     width: 100%;
-    overflow: hidden;
+    height: 100%;
+    min-height: 550px;
+    box-shadow: 2px 8px 10px #0000005b;
 
     @include list-reset;
 
-    &__item {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        // flex-shrink: 0;
-        padding: 6% 0 8%;
-        overflow: hidden;
-        opacity: 0;
-        width: 100%;
+    background: $gradient-form;
 
-        background: linear-gradient(to right, #212629 45%, #33b9bd 130%);
+    @include tablet-992 {
+        height: 600px;
+    }
+
+    @include laptopM-1200 {
+        height: 700px;
+    }
+
+    &__item {
+        @include position-absolute;
+        padding: 6% 0 8%;
     }
 
     &__text {
         margin-bottom: 8%;
+    }
+
+    &__btn {
+        margin-bottom: 20px;
     }
 }
 
 .description {
     @include list-reset;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    @include tablet-768 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     margin-bottom: 5%;
 
     &__items {
-        width: 46%;
-        margin-right: 5%;
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
 
-        &:last-child {
-            margin-right: 0;
+        @include tablet-768 {
+            width: 46%;
+            margin-right: 5%;
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 
@@ -65,10 +81,17 @@
     }
 }
 
-.active {
-    z-index: 2;
-    overflow: visible;
-    opacity: 1;
+.hide {
+    z-index: -1;
+    opacity: 0;
+}
 
+.active {
+    z-index: 1;
+    opacity: 1;
+    transform: translate3d(0, 0%, 0);
+
+    transition: $trasition-08;
+    transition-duration: 0.6s;
     box-shadow: 2px 8px 10px #0000005b;
 }

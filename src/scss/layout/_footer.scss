@@ -1,4 +1,5 @@
 .footer {
+    z-index: 2;
     padding: 12vh 0 6vh;
 
     @include tablet-768 {
