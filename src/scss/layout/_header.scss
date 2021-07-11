@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
 
-    padding: 3% 0 0;
+    padding: 1% 0 0;
 
     &__inner {
         display: flex;
@@ -38,14 +38,6 @@
             width: 45%;
         }
     }
-
-    // &__nav {
-    //     display: none;
-
-    //     @include tablet-992 {
-    //         display: block;
-    //     }
-    // }
 }
 
 .burger {

@@ -1,0 +1,82 @@
+.modal {
+    z-index: 32;
+    position: fixed;
+
+    visibility: hidden;
+    opacity: 0;
+
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    padding: 3%;
+
+    display: flex;
+    align-items: center;
+
+    transition: all 0.4s ease;
+
+    &--color {
+        @include bock-blur;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__inner {
+        z-index: 32;
+        position: relative;
+        margin: auto;
+        width: 80%;
+
+        min-height: 380px;
+        padding: 10%;
+        transition: all 0.4s ease;
+
+        background: $gradient-form;
+
+        @include tablet-768 {
+            padding: 15vh;
+            width: 600px;
+        }
+
+        @include laptopM-1200 {
+            padding: 5%;
+        }
+    }
+}
+
+.modal--visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-close {
+    z-index: 50;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid $color-green;
+    border-radius: 100%;
+
+    background: url(img/svg/close.svg) no-repeat 50% 50%;
+
+    background-size: 50%;
+
+    @include outline;
+    transition: all 0.6s ease-in-out;
+    transform: rotate(0deg);
+
+    &:hover,
+    &:focus,
+    &:active {
+        border: 1px solid $text-hover;
+    }
+}
+
+.feedback {
+    width: 50%;
+}

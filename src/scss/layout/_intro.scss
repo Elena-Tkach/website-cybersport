@@ -27,6 +27,7 @@
     }
 
     &__img {
+        z-index: -1;
         display: none;
         position: absolute;
         bottom: 0%;

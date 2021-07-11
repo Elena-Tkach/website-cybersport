@@ -148,6 +148,36 @@
             box-shadow: 3px 8px 10px #1f1e1ea8;
         }
     }
+
+    &--modal {
+        padding: 12px 40px;
+
+        &:hover,
+        &:focus,
+        &:active {
+            padding: 12px 40px 12px 60px;
+
+            &::before {
+                opacity: 1;
+                transform: translate3d(22px, 0, 0);
+            }
+        }
+
+        @include mobile-567 {
+            padding: 16px 60px;
+
+            &:hover,
+            &:focus,
+            &:active {
+                padding: 16px 50px 16px 90px;
+
+                &::before {
+                    opacity: 1;
+                    transform: translate3d(26px, 0, 0);
+                }
+            }
+        }
+    }
 }
 
 .list {

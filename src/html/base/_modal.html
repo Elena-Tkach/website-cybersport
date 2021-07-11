@@ -1,0 +1,37 @@
+<div class="modal modal--color js-modal" role="dialog" aria-modal="true">
+    <div class="modal__inner ">
+        <button class="modal__btn-close btn-close js_btn-close" aria-label="Закрыть окно" type="button">
+        </button>
+        <p class="feedback__subtitle subtitle subtitle--white">Заполните форму обратной связи и воспользуйтесь
+            преимуществами <span class="feedback__subtitle--span">Киберспорт</span>
+        </p>
+
+        <form class="feedback__form form  js-form" action="mail.php" enctype="multipart/form-data" method="POST">
+            <input type="hidden" name="admin_email[]" value="tcachelena@gmail.com"> <input type="hidden"
+                name="form_subject" value="Заявка с сайта">
+            <fieldset class="form__group form__group--contacts">
+                <input class="form__input form__input--contacts form__name" type="text" name="Name"
+                    placeholder="Ваше имя *" required="">
+
+                <input class="form__input form__input--contacts form__phone" type="tel" name="Tel"
+                    placeholder="Номер телефона*" required="" inputmode="text">
+
+                <input class="form__input form__input--contacts form__email" type="email" name="Email"
+                    placeholder="Email*" required="">
+            </fieldset>
+            <button class="form__btn button button--green button--modal" type="submit">Отправить</button>
+
+            <div class="placeholder"><small>* поле обязательно для заполнения</small></div>
+        </form>
+
+    </div>
+</div>
+
+<div class="popup popup--color popup--hidden js-popup ">
+    <div class="popup__inner popup__inner--color">
+        <button class="popup__btn-close btn-close js_btn-closePopup" aria-label="Закрыть окно" type="button">
+        </button>
+        <h3 class="popup__title">Ваше сообщение успешно отправленно!</h3>
+        <p class="popup__subtitle">В ближайшее время я свяжусь с вами!</p>
+    </div>
+</div>
