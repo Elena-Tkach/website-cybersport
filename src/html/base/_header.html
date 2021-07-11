@@ -4,69 +4,82 @@
             <a href="index.html" class="header__link">
                 <picture>
                     <source media="(min-width: 992px)" srcset="img/logo/logo_rus@1x.webp 1x,
-                        img/logo/logo_rus@1x.webp 2x">
+                        img/logo/logo_rus@2x.webp 2x">
                     <source type="image/webp"
-                        srcset="img/logo/logo_mobile_rus@1x.webp 1x, img/logo/logo_mobile_rus@1x.webp 2x">
+                        srcset="img/logo/logo_mobile_rus@2x.webp 1x, img/logo/logo_mobile_rus@2x.webp 2x">
 
 
                     <source media="(min-width: 992px)" srcset="img/logo/logo_rus@1x.png 1x,
-                        img/logo/logo_rus@1x.png 2x">
-                    <img class="header__logo" src="img/logo/logo_mobile_rus@1x.png"
-                        srcset="img/logo/logo_mobile_rus@1x.png" alt="logo">
+                        img/logo/logo_rus@2x.png 2x">
+                    <img class="header__logo" src="img/logo/logo_mobile_rus@2x.png"
+                        srcset="img/logo/logo_mobile_rus@2x.png" alt="logo">
                 </picture>
             </a>
 
-            <nav class="header__nav nav">
-                <ul class="nav__list list list--header">
-                    <li class="nav__item">
-                        <a href="about.html" class="nav__link">
-                            О нас
-                        </a>
-                    </li>
+            <div class="header__menu js-menu">
+                <button class="header__burger burger js-burger" aria-label="Открыть навигационное меню">
+                    <span class="burger__line">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </span>
+                </button>
 
-                    <li class="nav__item items nav__item--header">
-                        <a href="services.html" class="nav__link">
-                            <span class="nav__span nav__span--header">Услуги</span>
-                        </a>
-                        <ul class="items__list items__list--header">
-                            <li class="items__item">
-                                <a href="#" class="items__link">
-                                    Мобильные платежи РФ и СНГ
-                                </a>
-                            </li>
-                            <li class="items__item">
-                                <a href="#" class="items__link">
-                                    Платежи через терминал
-                                </a>
-                            </li>
-                            <li class="items__item">
-                                <a href="#" class="items__link">
-                                    Витрины электронных кошельков и операторов
-                                </a>
-                            </li>
-                            <li class="items__item">
-                                <a href="#" class="items__link">
-                                    Электронные кошельки
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav__item">
-                        <a href="technologies.html" class="nav__link">
-                            Технологии
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="contacts.html" class="nav__link">
-                            Контакты
-                        </a>
-                    </li>
+                <nav class="header__nav nav nav--header ">
+                    <ul class="nav__list list list--header">
+                        <li class="nav__item nav__item--header">
+                            <a href="about.html" class="nav__link">
+                                О нас
+                            </a>
+                        </li>
 
-                    <li class="nav__item">
-                        <a class="nav__link-lang" href="#">Ru</a>
-                    </li>
-                </ul>
-            </nav>
+                        <li class="nav__item items nav__item--header   js-dropdown">
+                            <a href="#services.html" class="nav__link">
+                                <span class="nav__span nav__span--header js-span">Услуги</span>
+                            </a>
+                            <ul class="items__list items__list--header">
+                                <li class="items__item">
+                                    <a href="services.html#mobile" class="items__link">
+                                        Мобильные платежи РФ и СНГ
+                                    </a>
+                                </li>
+                                <li class="items__item">
+                                    <a href="services.html#terminal" class="items__link">
+                                        Платежи через терминал
+                                    </a>
+                                </li>
+                                <li class="items__item">
+                                    <a href="services.html#showcases" class="items__link">
+                                        Витрины электронных кошельков и операторов
+                                    </a>
+                                </li>
+                                <li class="items__item">
+                                    <a href="services.html#wallets" class="items__link">
+                                        Электронные кошельки
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav__item nav__item--header">
+                            <a href="technologies.html" class="nav__link">
+                                Технологии
+                            </a>
+                        </li>
+
+                        <li class="nav__item nav__item--header">
+                            <a href="contacts.html" class="nav__link">
+                                Контакты
+                            </a>
+                        </li>
+
+                        <li class="nav__item nav__item--header">
+                            <a class="nav__link-lang" href="#">Ru</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
         </div>
     </div>
 </header>

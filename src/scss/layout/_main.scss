@@ -3,7 +3,11 @@
 
     &--font-intro {
         // text-align: center;
-        @include font-style(5vw, 700);
+        @include font-style(4.5vw, 700);
+
+        @include mobile-425 {
+            @include font-style(5vw, 700);
+        }
 
         @include tablet-768 {
             @include font-style(3vw, 700);
