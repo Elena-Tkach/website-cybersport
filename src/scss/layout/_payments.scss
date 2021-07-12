@@ -66,10 +66,8 @@
 
     &__img {
         @include position-absolute;
-
         width: 50%;
         transform: translate(40%, 0%);
-        // padding: 30% 0 40% 0;
 
         @include tablet-768 {
             top: 50%;

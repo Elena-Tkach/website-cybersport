@@ -1,26 +1,36 @@
-const menu = document.querySelector(`.js-menu`);
-const burgerBtn = document.querySelector(`.js-burger`);
-const dropdownItems = document.querySelectorAll(`.js-dropdown`);
+const menuEl = document.querySelector(`.js-menu`);
+const burgerBtnEl = document.querySelector(`.js-burger`);
+// const dropdownItems = document.querySelectorAll(`.js-dropdown`);
+// const list = document.querySelectorAll(`.js-list`);
 
-burgerBtn.addEventListener(`click`, showMenuBtnClick);
+const overlayHeaderEl = document.querySelector(`.js-overlay`);
 
-dropdownItems.forEach(item => {
-    item.addEventListener(`click`, (e) => {
-        openNavList(e);
+console.log(overlayHeaderEl);
 
-    });
-})
-
-function showMenuBtnClick() {
-    menu.classList.toggle(`show`);
-}
+burgerBtnEl.addEventListener(`click`, onShowHideBurgerClick);
+overlayHeaderEl.addEventListener(`click`, onShowHideBurgerClick);
+menuEl.addEventListener(`keydown`, (e) => {
+    if (e.code === `Escape`) {
+        onShowHideBurgerClick();
 
 
+    }
+});
 
-function openNavList(event) {
-    const self = event.currentTarget;
 
-    self.classList.toggle(`open-list`);
+function onShowHideBurgerClick() {
+    const addClassActive = menuEl.classList.toggle(`show`);
+    overlayHeaderEl.classList.toggle(`active-overlay`);
+    body.classList.toggle(`no-scroll`);
 
+
+    if (addClassActive) {
+        burgerBtnEl.setAttribute(`aria-label`, `Закрыть навигационное меню`);
+    }
+
+    if (!addClassActive) {
+        burgerBtnEl.setAttribute(`aria-label`, `Открыть навигационное меню`);
+
+    }
 }
 

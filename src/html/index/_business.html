@@ -16,7 +16,23 @@
 
     <div class="business__image">
         <picture>
-            <img class="business__img" src="img/business.png" alt="Ноутбук и разные экраны">
+            <source media="(min-width: 1200px)" srcset="img/business/1200@1x.webp 1x,
+            img/business/1200@2x.webp 2x">
+
+            <source media="(min-width: 768px)" srcset="img/business/768@1x.webp 1x,
+            img/business/768@1x.webp 2x">
+            <source type="image/webp" srcset="img/business/business@1x.webp 1x, img/business/business@2x.webp 2x">
+
+
+
+            <source media="(min-width: 1200px)" srcset="img/business/1200@1x.png 1x,
+            img/business/1200@2x.png 2x">
+
+            <source media="(min-width: 768px)" srcset="img/business/768@1x.png 1x,
+            img/business/768@1x.png 2x">
+
+            <img class="business__img js-parallax" src="img/business/business@1x.png"
+                srcset="img/business/business@2x.png" alt="Ноутбук и разные экраны">
         </picture>
     </div>
 

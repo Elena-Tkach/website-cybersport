@@ -3,6 +3,16 @@ const defaultOffset = 200;
 const header = document.querySelector(`.js-header`);
 
 
+if (sc >= 450) {
+    header.style.cssText = `display:none`;
+}
+
+
+window.addEventListener(`scroll`, function () {
+
+    scrollheader();
+});
+
 
 function scrollheader() {
     const scrollPosition = () => window.pageXOffset || document.documentElement.scrollTop;
