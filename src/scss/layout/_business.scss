@@ -53,13 +53,13 @@
     &__img {
         position: absolute;
         width: 60%;
-        top: 20%;
-        // top: 0%;
+        top: 10%;
+
         left: 20%;
-        // transform: translate(35%, -40%);
 
         @include tablet-768 {
-            // transform: translate(-10%, -50%);
+            top: 20%;
+            left: 0%;
             width: 80%;
         }
     }

@@ -11,6 +11,7 @@
         bottom: 0;
 
         text-align: center;
+        background-color: #212629a1;
 
         @include bock-blur;
         padding: 22vh 2% 22vh 10%;
@@ -79,35 +80,6 @@
         transition: all 0.6s;
     }
 
-    &__span {
-        position: relative;
-
-        transition: all 0.6s;
-        cursor: pointer;
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            // padding: 2%;
-            background: url("img/icon/arrow1.svg") no-repeat center;
-            transition: all 0.6s ease;
-
-            top: 0;
-            right: 0;
-            transform: translate(150%, 45%);
-        }
-
-        &--footer {
-            @include font-style(1vw, 300);
-
-            @include tablet-768 {
-                @include font-style(0.6vw, 300);
-            }
-        }
-    }
-
     &__link-lang {
         padding: 4px 10px;
         background-color: transparent;
@@ -135,25 +107,29 @@
     position: relative;
     transition: all 0.6s ease-in-out;
     pointer-events: all;
+    background: #21262952;
+
+    @include tablet-992 {
+        background: transparent;
+    }
 
     .items__list {
         position: relative;
-
-        visibility: hidden;
-        opacity: 0;
         width: 100%;
-        max-height: 0;
+        padding: 32px;
 
         text-align: left;
         @include font-style(0.6vw, 300);
 
-        background: #21262952;
+        background: #21262981;
         @include bock-blur;
 
         transition: 0.6s ease-in-out;
 
         @include tablet-992 {
             position: absolute;
+            visibility: hidden;
+            opacity: 0;
             margin: 12px 0;
             padding: 32px;
             min-width: 450px;
@@ -172,10 +148,13 @@
         }
 
         &--footer {
+            display: none;
+
             @include tablet-992 {
+                display: block;
                 top: 0;
                 left: 40%;
-                // padding: 50%;
+
                 transform: translate(20%, -15%);
             }
         }
@@ -208,6 +187,10 @@
                 margin-bottom: 4%;
             }
         }
+
+        .items__link {
+            @include outline;
+        }
     }
 }
 
@@ -225,34 +208,6 @@
                 opacity: 1;
                 max-height: 400px;
             }
-        }
-    }
-}
-
-.open-list {
-    .items__list {
-        visibility: visible;
-        opacity: 1;
-        max-height: 400px;
-        padding: 50%;
-        padding: 8%;
-        margin: 5% 0;
-
-        &--footer {
-            width: 300px;
-        }
-
-        @include tablet-992 {
-            padding: 58%;
-            margin: 35% 0;
-        }
-    }
-
-    .nav__span {
-        color: $text-hover;
-
-        &::before {
-            transform: translate(150%, 55%);
         }
     }
 }

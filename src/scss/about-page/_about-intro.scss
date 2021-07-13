@@ -29,23 +29,18 @@
     }
 
     &__img {
+        z-index: -1;
         display: none;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(0%, -50%);
+        top: 30%;
+        right: 5%;
 
         @include tablet-768 {
             display: block;
         }
 
-        @include laptopM-1200 {
-            z-index: -1;
-            transform: translate(-2%, -50%);
-        }
-
-        @include laptopM-1440 {
-            transform: translate(10%, -50%);
+        @include tablet-992 {
+            top: 20%;
         }
     }
 
