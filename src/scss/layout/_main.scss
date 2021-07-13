@@ -238,6 +238,10 @@
         background-image: url("img/about/bg2.jpg");
     }
 
+    &--technology {
+        background-image: url("img/technology/14.jpg");
+    }
+
     .overlay {
         @include position-absolute;
 
@@ -247,6 +251,10 @@
 
         &--about {
             background: rgba(0, 0, 0, 0.8);
+        }
+
+        &--technology {
+            background: rgba(0, 0, 0, 0.4);
         }
     }
 }
