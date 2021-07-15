@@ -63,6 +63,7 @@
     color: $text-color;
     letter-spacing: 2px;
     margin: 0;
+
     @include font-style(1vw, 300);
 
     @include tablet-768 {
@@ -80,6 +81,18 @@
     &__span {
         font-weight: 400;
         text-transform: uppercase;
+    }
+}
+
+.subtitle {
+    &--font {
+        @include font-style(1.6vw, 700);
+        text-align: center;
+        line-height: 1.2;
+
+        @include tablet-768 {
+            @include font-style(1vw, 700);
+        }
     }
 }
 
@@ -213,6 +226,13 @@
                 @include font-style(0.3vw, 300);
             }
         }
+
+        &--align {
+            font-size: calc(0.5vw + 10px);
+            text-align: center;
+
+            letter-spacing: 1px;
+        }
     }
 }
 
@@ -240,6 +260,10 @@
 
     &--technology {
         background-image: url("img/technology/14.jpg");
+    }
+
+    &--contacts {
+        background-image: url("img/contacts-page/i-1.jpg");
     }
 
     .overlay {
@@ -303,23 +327,4 @@
     @include tablet-768 {
         background-position: top center;
     }
-}
-
-.overlay-header {
-    position: fixed;
-    z-index: 5;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: #000;
-    transition: 0.5s;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.active-overlay {
-    opacity: 0.25;
-    pointer-events: all;
-    transition: 0.5s;
 }

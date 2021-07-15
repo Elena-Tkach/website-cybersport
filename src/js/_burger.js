@@ -1,18 +1,15 @@
 const menuEl = document.querySelector(`.js-menu`);
 const burgerBtnEl = document.querySelector(`.js-burger`);
-// const dropdownItems = document.querySelectorAll(`.js-dropdown`);
 const list = document.querySelector(`.js-list`);
 const overlayHeaderEl = document.querySelector(`.js-overlay`);
-
-console.log(overlayHeaderEl);
 
 burgerBtnEl.addEventListener(`click`, onShowHideBurgerClick);
 
 overlayHeaderEl.addEventListener(`click`, onShowHideBurgerClick);
+
 menuEl.addEventListener(`keydown`, (e) => {
     if (e.code === `Escape`) {
         onShowHideBurgerClick();
-
     }
 });
 

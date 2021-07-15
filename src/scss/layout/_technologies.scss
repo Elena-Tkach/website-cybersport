@@ -3,9 +3,6 @@
     transition: all 0.6s ease;
 
     &__text {
-        padding-top: 40%;
-        color: $text-color;
-
         &--card1 {
             background-image: url(img/svg/teh1.svg);
         }
@@ -29,6 +26,11 @@
         background-size: 40%;
         background-position: top center;
         background-repeat: no-repeat;
+
+        &--padding {
+            padding-top: 40%;
+            color: $text-color;
+        }
     }
 
     .item {
@@ -39,7 +41,7 @@
 
         margin-bottom: 5%;
         margin-right: 2%;
-        // margin-bottom: 8%;
+
         transition: all 0.6s ease-in-out;
 
         &:last-child {
@@ -69,16 +71,91 @@
             background: $card-technology;
         }
 
-        // &--padding {
-        //     padding: 4% 1% 2%;
+        &--size {
+            padding: 12%;
 
-        //     @include tablet-992 {
-        //         padding: 6% 3%;
-        //     }
+            @include tablet-768 {
+                padding: 5%;
+                width: 48%;
+            }
 
-        //     @include laptopM-1200 {
-        //         padding: 4% 3%;
-        //     }
-        // }
+            @include laptopM-1440 {
+                width: 23%;
+                padding: 2%;
+            }
+        }
+
+        &--bg {
+            margin-right: 0;
+            justify-content: flex-start;
+            background: $card-technology;
+
+            box-shadow: $card-box-black, $card-box-black-inset, $box-shadow-black-inset;
+
+            @include tablet-768 {
+                border-radius: $card-border-radius;
+            }
+
+            // @include laptopM-1200 {
+            //     border-radius: $card-border-radius;
+            // }
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 12%;
+        padding: 39% 0% 0%;
+        background-repeat: no-repeat;
+        background-position: top center;
+
+        @include laptopM-1200 {
+            padding-top: 40%;
+        }
+
+        @include laptopM-1440 {
+            padding-top: 56%;
+        }
+
+        &--1 {
+            padding-right: 15%;
+            padding-left: 15%;
+            background-image: url("img/technology/icon-1.png");
+            background-size: 42%;
+
+            @include tablet-768 {
+                background-size: 40%;
+            }
+        }
+
+        &--2 {
+            background-image: url("img/technology/22.png");
+            background-size: 38%;
+
+            @include laptopM-1440 {
+                background-size: 42%;
+            }
+        }
+
+        &--3 {
+            background-image: url("img/technology/icon-3.png");
+            background-size: 45%;
+
+            @include tablet-768 {
+                background-size: 38%;
+            }
+
+            @include laptopM-1200 {
+                background-size: 44%;
+            }
+        }
+
+        &--4 {
+            background-image: url("img/technology/icon-4.png");
+            background-size: 45%;
+
+            @include laptopM-1200 {
+                background-size: 50%;
+            }
+        }
     }
 }

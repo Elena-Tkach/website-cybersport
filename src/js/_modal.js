@@ -5,35 +5,31 @@ const btns = document.querySelectorAll('.js-btn');
 const form = document.querySelectorAll(`.js-form`);
 const formContacts = document.querySelector(`.js-form--contacts`);
 
-
-
-// const footerBtn = document.querySelector(`.js-modal-btn`);
-
 const popupEl = document.querySelector(`.js-popup`);
-const btnClosePoup = document.querySelector(`.js_btn-closePopup`);
+ const btnClosePoup = document.querySelector(`.js_btn-closePopup`);
 
-btns.forEach((el) => {
+const currentFormReset = form.forEach(function (el) { el.reset(); });
+
+
+
+btns.forEach(el => {
     el.addEventListener('click', openModalIconClick)
 })
 
 
-const currentFormReset = form.forEach(function (el) { el.reset(); });
-let previousActiveElement;
-
-
 //events
 
-btnClose.addEventListener(`click`, function () {
+btnClose.addEventListener(`click`, () => {
     hideModalIconClick();
     currentFormReset;
 });
 
-btnClosePoup.addEventListener(`click`, function () {
+btnClosePoup.addEventListener(`click`, () => {
     hidePoupClick();
 });
 
 
-window.addEventListener(`click`, function (event) {
+window.addEventListener(`click`, (event) => {
     if (event.target === modalEl) {
         hideModalIconClick();
         currentFormReset;

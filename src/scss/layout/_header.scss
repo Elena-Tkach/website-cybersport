@@ -203,3 +203,22 @@
         transform: translate3d(0, -25vh, 0);
     }
 }
+
+.overlay-header {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #000;
+    transition: 0.5s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.active-overlay {
+    opacity: 0.25;
+    pointer-events: all;
+    transition: 0.5s;
+}

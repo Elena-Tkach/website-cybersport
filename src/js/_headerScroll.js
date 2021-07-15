@@ -8,8 +8,7 @@ if (sc >= 450) {
 }
 
 
-window.addEventListener(`scroll`, function () {
-
+window.addEventListener(`scroll`, () => {
     scrollheader();
 });
 
