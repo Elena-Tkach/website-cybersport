@@ -1,5 +1,7 @@
 .address {
+    z-index: 1;
     font-style: normal;
+    position: relative;
 
     &__list {
         @include list-reset;

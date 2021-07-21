@@ -1,29 +1,39 @@
 .service {
     position: relative;
     @include section-grey;
+
     transition: $trasition-08;
 
-    padding: 6vh 0;
+    padding: 10vh 0 20vh;
 
     &__title {
         margin-bottom: 35%;
 
         @include tablet-768 {
-            margin-bottom: 15%;
+            margin-bottom: 8%;
         }
     }
 
+    &__link {
+        @include position-absolute;
+    }
+
     &__list {
+        position: relative;
         @include list-reset;
     }
 
     &__items {
         position: relative;
+        display: flex;
+        align-items: center;
 
-        box-shadow: 2px 8px 10px #0000005b;
+        flex-direction: column;
+
         margin-bottom: 25%;
 
         @include tablet-768 {
+            flex-direction: row;
             margin-bottom: 15%;
         }
 
@@ -33,36 +43,48 @@
                 margin-bottom: 0;
             }
         }
-
-        &--left {
-            background: $gradient-service;
-        }
-
-        &--right {
-            background: $gradient-form;
-        }
     }
 }
 
 .service__bg {
+    pointer-events: none;
+    z-index: 2;
     position: absolute;
     top: 0;
-    right: 10%;
+    right: 8%;
     left: 0;
-    bottom: -5%;
+    bottom: 0%;
 
     background-repeat: no-repeat;
-    background-position: bottom right;
+
+    display: none;
+
+    @include tablet-768 {
+        display: block;
+    }
+
+    @include laptopM-1200 {
+        top: 0;
+        right: 5%;
+        left: 0;
+        bottom: -15%;
+    }
+
+    &--left {
+        background-position-x: right;
+        background-position-y: bottom;
+    }
+
+    &--right {
+        background-position-x: left;
+        background-position-y: bottom;
+    }
 
     &--1 {
         @include mobile-425 {
             background-image: url("img/services-icon/1.png");
 
-            background-size: 40%;
-        }
-
-        @include laptopM-1200 {
-            background-size: 35%;
+            background-size: 30%;
         }
     }
 
@@ -86,7 +108,7 @@
         }
 
         @include laptopM-1200 {
-            background-size: 25%;
+            background-size: 20%;
         }
     }
 
@@ -98,21 +120,19 @@
         }
 
         @include laptopM-1200 {
-            background-size: 20%;
+            background-size: 15%;
         }
     }
 }
 
 .box {
-    width: 60%;
+    position: relative;
+    width: 100%;
 
-    padding: 2% 2%;
-    position: absolute;
-    top: 0;
+    padding: 4% 4%;
+    // background: $background-gradient1;
 
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    box-shadow: -5px -2px 10px #0000005b, $card-box-shadow-inset;
+    // background: $background-black1;
 
     transition: $trasition-08;
 
@@ -123,95 +143,159 @@
 
     transition: $trasition-08;
 
-    left: 0;
-    transform: translate(0%, -99%);
+    @include tablet-768 {
+        width: 30%;
+        height: 350px;
+    }
 
-    @include mobile-567 {
-        transform: translate(20%, -99%);
+    @include tablet-992 {
+        width: 40%;
     }
 
     &--left {
-        background: $button-hover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        @include tablet-768 {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: $card-border-radius;
+            border-top-left-radius: $card-border-radius;
+        }
     }
 
     &--right {
-        background: $card-technology;
-    }
+        order: 1;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
 
-    @include mobile-425 {
-        width: 50%;
-    }
-
-    @include mobile-567 {
-        width: 40%;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-    }
-
-    @include laptopM-1200 {
-        width: 35%;
-        padding: 2%;
-        border-top-left-radius: $card-border-radius;
-        border-top-right-radius: $card-border-radius;
+        @include tablet-768 {
+            order: 2;
+            border-bottom-right-radius: $card-border-radius;
+            border-top-right-radius: $card-border-radius;
+        }
     }
 
     &__name {
         margin: 0;
-        padding: 4% 0 4% 22%;
 
-        color: $text-color;
+        color: $text-black;
+        // color: $text-color;
         line-height: 1.5;
         letter-spacing: 1px;
         text-align: start;
-        pointer-events: none;
+        @include font-style(1.5vw, 700);
+        // pointer-events: none;
+        @include tablet-768 {
+            @include font-style(1vw, 700);
+        }
+        &--left {
+            padding: 4% 0 4% 15%;
+
+            @include mobile-425 {
+                padding: 3% 0 3% 15%;
+            }
+
+            @include tablet-992 {
+                padding: 3% 0 3% 25%;
+            }
+        }
+
+        &--right {
+            padding: 4% 10% 4% 0;
+
+            @include mobile-425 {
+                padding: 3% 15% 3% 0;
+            }
+
+            @include laptopM-1200 {
+                padding: 3% 22% 3% 0;
+            }
+        }
 
         transition: $trasition-08;
-        @include font-style(0.1vw, 300);
-
-        @include mobile-425 {
-            padding: 3% 0 3% 22%;
-        }
-
-        @include tablet-768 {
-            padding: 3% 0 3% 22%;
-            @include font-style(0.5vw, 400);
-        }
     }
 
     .icon {
         &--1 {
             background-image: url(img/svg/pay1.svg);
+            background-position: 0% 50%;
         }
 
         &--2 {
             background-image: url(img/svg/pay2.svg);
+            background-position: center right;
         }
 
         &--3 {
             background-image: url(img/svg/pay3.svg);
+            background-position: 0% 50%;
         }
 
         &--4 {
             background-image: url(img/svg/pay4.svg);
+            background-position: center right;
         }
 
         background-repeat: no-repeat;
-        background-size: 15%;
-        background-position: 0% 50%;
+        background-size: 12%;
 
         transition: $trasition-08;
+        @include tablet-768 {
+            background-size: 0;
+        }
+
+        @include tablet-992 {
+            background-size: 15%;
+        }
     }
 }
 .description {
     position: relative;
-    padding: 10vh 0;
+
+    width: 100%;
+
+    padding: 5vh 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 5px 10px 0px #0000005b;
+
+    @include tablet-768 {
+        width: 70%;
+        border-radius: $card-border-radius;
+    }
+
+    @include tablet-992 {
+        width: 60%;
+    }
+
+    &--left {
+        background: linear-gradient(-220deg, #212629 45%, #33b9bd 130%);
+
+        @include tablet-768 {
+            align-items: flex-start;
+            padding: 8vh 2%;
+            box-shadow: -5px -2px 10px #0000005b, $card-box-shadow-inset;
+        }
+    }
+
+    &--right {
+        order: 2;
+        z-index: 1;
+        background: linear-gradient(220deg, #212629 45%, #33b9bd 130%);
+
+        @include tablet-768 {
+            order: 1;
+            align-items: flex-end;
+            padding: 8vh 2% 8vh 8%;
+            box-shadow: 4px -4px 5px -4px #33b9bd inset, 5px 2px 10px #0000005b;
+        }
+    }
 
     &__text {
-        margin-bottom: 5%;
-
-        @include tablet-992 {
-            width: 70%;
-        }
+        margin-bottom: 10%;
+        letter-spacing: 1px;
     }
 
     &__list {
@@ -263,4 +347,8 @@
             }
         }
     }
+
+    // &__btn {
+    //     margin-left: 70%;
+    // }
 }

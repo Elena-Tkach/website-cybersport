@@ -3,6 +3,7 @@ const burgerBtnEl = document.querySelector(`.js-burger`);
 const list = document.querySelector(`.js-list`);
 const overlayHeaderEl = document.querySelector(`.js-overlay`);
 
+
 burgerBtnEl.addEventListener(`click`, onShowHideBurgerClick);
 
 overlayHeaderEl.addEventListener(`click`, onShowHideBurgerClick);
@@ -33,9 +34,14 @@ function onShowHideBurgerClick() {
 
 function onListLinkClick(e) {
     const target = e.target;
-    const clickLink = target.classList.contains(`js-link`)
+    const clickLink = target.classList.contains(`js-link`);
+
 
     if (clickLink) {
+        onShowHideBurgerClick();
+    }
+
+    if (menuEl.classList.contains(`show`)) {
         onShowHideBurgerClick();
     }
 

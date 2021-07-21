@@ -1,6 +1,7 @@
 .business {
     position: relative;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
 
@@ -8,9 +9,13 @@
         flex-direction: row;
     }
 
+    &__background {
+        position: fixed;
+    }
+
     &__inner {
         order: 2;
-        @include bock-blur;
+
         width: 90%;
         margin: 5%;
         padding: 5%;
@@ -21,8 +26,6 @@
 
             position: relative;
             width: 48%;
-
-            text-align: start;
         }
 
         @include tablet-992 {

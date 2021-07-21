@@ -55,24 +55,28 @@
             width: 50%;
             margin-top: 0;
             margin-left: 50%;
-
-            text-align: right;
-
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
         }
     }
 
     &__img {
         @include position-absolute;
-        width: 50%;
-        transform: translate(40%, 0%);
+        width: 40%;
+        top: 10%;
+        left: 30%;
+
+        transform: translate(-50%, -50%);
 
         @include tablet-768 {
-            top: 50%;
-            width: 40%;
-            transform: translate(0%, -60%);
+            left: 0;
+        }
+
+        @include tablet-992 {
+            width: 35%;
+            top: 0%;
+        }
+
+        @include laptopM-1200 {
+            top: 10%;
         }
     }
 
@@ -84,7 +88,6 @@
         margin-bottom: 18%;
 
         @include tablet-768 {
-            margin-left: 20%;
             margin-bottom: 0;
         }
     }

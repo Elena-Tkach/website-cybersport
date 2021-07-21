@@ -1,8 +1,7 @@
 .title {
     margin: 0;
-
+    text-align: center;
     &--font-intro {
-        // text-align: center;
         @include font-style(4.5vw, 700);
 
         @include mobile-425 {
@@ -44,7 +43,6 @@
     }
 
     &--gray-section {
-        text-align: right;
         text-transform: uppercase;
         @include font-style(1.2vw, 700);
     }
@@ -62,6 +60,7 @@
 .text {
     color: $text-color;
     letter-spacing: 2px;
+    text-align: center;
     margin: 0;
 
     @include font-style(1vw, 300);
@@ -86,12 +85,19 @@
 
 .subtitle {
     &--font {
-        @include font-style(1.6vw, 700);
+        @include font-style(0.9vw, 700);
         text-align: center;
-        line-height: 1.2;
+
+        @include mobile-425 {
+            @include font-style(2vw, 700);
+        }
 
         @include tablet-768 {
-            @include font-style(1vw, 700);
+            @include font-style(0.9vw, 700);
+        }
+
+        @include laptopM-1200 {
+            @include font-style(0.8vw, 700);
         }
     }
 }
@@ -101,7 +107,7 @@
     @include outline;
 
     color: $text-color;
-    // background-color: transparent;
+    background-color: transparent;
 
     text-transform: uppercase;
     @include font-style(0.3vw, 400);
@@ -132,7 +138,7 @@
     &:hover,
     &:focus,
     &:active {
-        padding: 16px 50px 16px 90px;
+        padding: 16px 40px 16px 80px;
 
         &::before {
             opacity: 1;
@@ -205,7 +211,7 @@
         @include font-style(1.2vw, 400);
 
         @include tablet-992 {
-            @include font-style(0.7vw, 400);
+            @include font-style(0.8vw, 400);
         }
 
         @include laptopM-1200 {
@@ -228,10 +234,22 @@
         }
 
         &--align {
-            font-size: calc(0.5vw + 10px);
+            font-size: calc(0.6vw + 10px);
             text-align: center;
-
+            color: rgb(199, 199, 199);
             letter-spacing: 1px;
+
+            @include mobile-425 {
+                font-size: calc(0.8vw + 10px);
+            }
+
+            @include tablet-768 {
+                font-size: calc(0.4vw + 10px);
+            }
+
+            @include laptopM-1440 {
+                font-size: calc(0.3vw + 10px);
+            }
         }
     }
 }

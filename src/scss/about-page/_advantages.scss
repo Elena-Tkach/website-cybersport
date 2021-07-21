@@ -13,12 +13,8 @@
 
     &__title {
         margin-bottom: 10%;
-        text-align: center;
-        transition: all 0.6s ease-in-out;
 
-        @include tablet-768 {
-            text-align: start;
-        }
+        transition: all 0.6s ease-in-out;
     }
 
     &__list {
