@@ -118,6 +118,11 @@
 }
 
 //adaptive
+@mixin laptopM-1700 {
+    @media (min-width: 1700px) {
+        @content;
+    }
+}
 
 @mixin laptopM-1440 {
     @media (min-width: 1440px) {

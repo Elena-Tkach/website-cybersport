@@ -60,23 +60,23 @@
 
     &__img {
         @include position-absolute;
-        width: 40%;
-        top: 10%;
-        left: 30%;
 
-        transform: translate(-50%, -50%);
+        top: 8%;
+        left: 25%;
+        max-width: 70%;
+
+        @include mobile-425 {
+            left: 22%;
+        }
 
         @include tablet-768 {
-            left: 0;
+            max-width: 100%;
+            top: 20%;
+            left: 5%;
         }
 
-        @include tablet-992 {
-            width: 35%;
-            top: 0%;
-        }
-
-        @include laptopM-1200 {
-            top: 10%;
+        @include laptopM-1700 {
+            left: 12%;
         }
     }
 
