@@ -23,6 +23,23 @@
     left: 0;
 }
 
+@mixin intro-section {
+    position: relative;
+    padding-top: 180px;
+    padding-bottom: 100px;
+    transition: all 0.6s ease;
+
+    @include tablet-768 {
+        padding-top: 250px;
+        padding-bottom: 100px;
+    }
+
+    @include laptopM-1200 {
+        padding-top: 38vh;
+        padding-bottom: 250px;
+    }
+}
+
 //button
 @mixin btn-size($height, $width) {
     padding: #{$height} #{$width};
@@ -93,14 +110,6 @@
     &__item {
         position: relative;
     }
-}
-
-//gradient
-@mixin gradient-text($gradient) {
-    color: $text-color;
-    background: #{$gradient};
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 @mixin font-style($size, $weight) {

@@ -6,11 +6,14 @@ const form = document.querySelectorAll(`.js-form`);
 const formContacts = document.querySelector(`.js-form--contacts`);
 
 const popupEl = document.querySelector(`.js-popup`);
- const btnClosePoup = document.querySelector(`.js_btn-closePopup`);
+const btnClosePoup = document.querySelector(`.js_btn-closePopup`);
 
 const currentFormReset = form.forEach(function (el) { el.reset(); });
 
-
+//маска телефона 
+const selector = document.querySelectorAll(`input[type="tel"]`);
+const im = new Inputmask(`+7 (999) 999-99-99`);
+im.mask(selector);
 
 btns.forEach(el => {
     el.addEventListener('click', openModalIconClick)
@@ -67,8 +70,6 @@ function hideModalIconClick() {
 }
 
 
-
-
 function successSentForm() {
     popupEl.classList.add('popup__visible');
 
@@ -98,4 +99,7 @@ function onPressEscKeydown(el) {
 
     }
 }
+
+
+
 

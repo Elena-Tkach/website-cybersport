@@ -1,7 +1,9 @@
 let scroll = 0;
-const defaultOffset = 200;
+const defaultOffset = 400;
 const header = document.querySelector(`.js-header`);
+const anchors = document.querySelectorAll(`.js-anchors`);
 
+slowScroll(anchors);
 
 if (sc >= 450) {
     header.style.cssText = `display:none`;
@@ -31,4 +33,18 @@ function scrollheader() {
     }
 
     scroll = scrollPosition();
+}
+
+
+function slowScroll(anchors) {
+    for (let anchor of anchors) {
+        anchor.addEventListener(`click`, (e) => {
+            e.preventDefault();
+            const blockID = anchor.getAttribute(`href`)
+            document.querySelector(`${blockID}`).scrollIntoView({
+                behavior: `smooth`,
+                block: `start`
+            })
+        })
+    }
 }

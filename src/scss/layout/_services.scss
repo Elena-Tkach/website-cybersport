@@ -21,6 +21,7 @@
 
     .item {
         margin-bottom: 8%;
+        transition: all 0.6s ease-in-out;
 
         &--width {
             width: 80%;
@@ -36,9 +37,10 @@
         }
         &--style {
             border-radius: $card-border-radius;
-            box-shadow: $card-box-shadow, $card-box-shadow-inset, $box-shadow-white-inset;
+            box-shadow: $card-box-shadow;
+            border: 2px solid $color-green;
 
-            background: $card-gradient;
+            background: $text-color;
         }
 
         &--hover-gradient {
@@ -46,7 +48,7 @@
             &:active,
             &:focus {
                 border-radius: $card-border-radius;
-                background: $card-technology;
+                background: #2c6468;
             }
         }
 
@@ -69,5 +71,3 @@
         }
     }
 }
-
-

@@ -1,14 +1,20 @@
 .title {
     margin: 0;
     text-align: center;
+
     &--font-intro {
         @include font-style(4.5vw, 700);
+        line-height: 1.5;
 
         @include mobile-425 {
             @include font-style(5vw, 700);
         }
 
         @include tablet-768 {
+            @include font-style(2.9vw, 700);
+        }
+
+        @include tablet-992 {
             @include font-style(3vw, 700);
         }
     }
@@ -23,23 +29,14 @@
 
     &__border--white {
         position: relative;
-        @include text-stroke($text-color);
 
         @include mobile-567 {
             margin-right: 5%;
         }
     }
 
-    &__border--black {
-        @include text-stroke($text-black);
-    }
-
     &--uppercase {
         text-transform: uppercase;
-    }
-
-    &--gradient {
-        @include gradient-text($h1-gradient);
     }
 
     &--gray-section {
@@ -59,7 +56,7 @@
 .subtitle,
 .text {
     color: $text-color;
-    letter-spacing: 2px;
+
     text-align: center;
     margin: 0;
 
@@ -206,7 +203,7 @@
 
     .text {
         margin: 0;
-        // margin: 0 5% 5% 5%;
+
         text-align: center;
         @include font-style(1.2vw, 400);
 
