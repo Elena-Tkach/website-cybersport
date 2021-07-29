@@ -1,6 +1,6 @@
 .about {
     @include intro-section;
-
+    overflow: hidden;
     &__inner {
         width: 100%;
         position: relative;

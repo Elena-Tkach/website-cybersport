@@ -50,6 +50,37 @@
     }
 }
 
+.experience__item {
+    opacity: 0;
+
+    transform: translateY(-60px);
+    transition: all 1s ease;
+
+    &:nth-child(1) {
+        transform: translateY(-20px);
+        transition-delay: 0.2s;
+    }
+    &:nth-child(2) {
+        transform: translateY(-25px);
+        transition-delay: 0.4s;
+    }
+
+    &:nth-child(3) {
+        transform: translateY(-30px);
+        transition-delay: 0.6s;
+    }
+
+    &:nth-child(4) {
+        transform: translateY(-35px);
+        transition-delay: 0.8s;
+    }
+}
+
+.experience__item.animation-class {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .number {
     @include font-style(4vw, 700);
 

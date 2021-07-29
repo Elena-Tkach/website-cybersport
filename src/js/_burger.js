@@ -36,7 +36,6 @@ function onListLinkClick(e) {
     const target = e.target;
     const clickLink = target.classList.contains(`js-link`);
 
-
     if (clickLink) {
         onShowHideBurgerClick();
     }

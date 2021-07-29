@@ -1,12 +1,12 @@
 'use strict';
 const { src, dest, parallel, series, watch } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));;
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const fileInclude = require('gulp-file-include');
 const del = require('del');
 const autoprefixer = require('gulp-autoprefixer');
-const svgSprite = require('gulp-svg-sprite');
+// const svgSprite = require('gulp-svg-sprite');
 const rename = require("gulp-rename");
 const uglify = require('gulp-uglify-es').default;
 const cleanCSS = require('gulp-clean-css');
@@ -36,17 +36,17 @@ const css = () => {
 }
 
 
-const svgSprites = () => {
-    return src('./src/img/svg/**.svg')
-        .pipe(svgSprite({
-            mode: {
-                stack: {
-                    sprite: "../sprite.svg"
-                },
-            }
-        }))
-        .pipe(dest('./dist/img'))
-}
+// const svgSprites = () => {
+//     return src('./src/img/svg/**.svg')
+//         .pipe(svgSprite({
+//             mode: {
+//                 stack: {
+//                     sprite: "../sprite.svg"
+//                 },
+//             }
+//         }))
+//         .pipe(dest('./dist/img'))
+// }
 
 
 const js = () => {
@@ -97,7 +97,7 @@ const watchFiles = () => {
     watch('./src/resources/**', resources);
     watch('./src/js/**.js', js);
     watch('./src/fonts/*.{woff,woff2}', fonts);
-    watch('./src/img/**.svg', svgSprites);
+    // watch('./src/img/**.svg', svgSprites);
     watch('./src/img/**/*.{jpg,png,svg,ico,gif,webp}', images);
 
 }
@@ -110,7 +110,7 @@ exports.css = css;
 exports.watchFiles = watchFiles;
 exports.fileinclude = html;
 
-exports.default = series(clean, parallel(html, js, fonts, images, resources, svgSprites), css, watchFiles);
+exports.default = series(clean, parallel(html, js, fonts, images, resources), css, watchFiles);
 
 const cssBuild = () => {
     return src('./src/scss/**/*.scss')
@@ -146,5 +146,5 @@ const htmlBuild = () => {
 }
 
 
-exports.build = series(clean, parallel(htmlBuild, jsBuild, fonts, resources, images, svgSprites), cssBuild);
+exports.build = series(clean, parallel(htmlBuild, jsBuild, fonts, resources, images), cssBuild);
 

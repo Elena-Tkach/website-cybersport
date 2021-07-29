@@ -1,6 +1,6 @@
 .services-intro {
     @include intro-section;
-    
+    overflow: hidden;
 
     &__inner {
         width: 100%;
@@ -26,8 +26,8 @@
         }
 
         @include laptopM-1200 {
-            top: 20%;
-            // width: 40%;
+            top: 25%;
+            
         }
 
         @include laptopM-1440 {
