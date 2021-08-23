@@ -5,16 +5,12 @@ const anchors = document.querySelectorAll(`.js-anchors`);
 
 slowScroll(anchors);
 
-if (sc >= 450) {
-    header.style.cssText = `display:none`;
-}
-
-
+//обработчик события скролл
 window.addEventListener(`scroll`, () => {
     scrollheader();
 });
 
-
+//появление хедера при скролле вверх
 function scrollheader() {
     const scrollPosition = () => window.pageXOffset || document.documentElement.scrollTop;
     const containHide = () => header.classList.contains(`hide`);
@@ -35,7 +31,7 @@ function scrollheader() {
     scroll = scrollPosition();
 }
 
-
+//медленный скролл к якорю
 function slowScroll(anchors) {
     for (let anchor of anchors) {
         anchor.addEventListener(`click`, (e) => {

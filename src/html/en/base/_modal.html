@@ -1,0 +1,39 @@
+<div class="modal modal--color js-modal" role="dialog" aria-modal="true">
+    <div class="modal__inner ">
+        <button class="modal__btn-close btn-close js_btn-close" aria-label="Close a window" type="button">
+        </button>
+        <p class="feedback__subtitle subtitle subtitle--white">Fill out the feedback form and use
+            advantages <span class="feedback__subtitle--span">Сybersport</span>
+        </p>
+
+        <form class="feedback__form form  js-form" action="mail.php" enctype="multipart/form-data" method="POST">
+            <input type="hidden" name="admin_email[]" value="info@sport-pay.ru"> <input type="hidden"
+                name="form_subject" value="Application from the site cybersport">
+            <fieldset class="form__group form__group--contacts">
+                <input class="form__input form__input--contacts form__name" type="text" name="Name" placeholder="Name*"
+                    required="">
+
+                <input class="form__input form__input--contacts form__phone" type="tel" name="Tel" placeholder="Phone*"
+                    required="">
+
+                <input class="form__input form__input--contacts form__email" type="email" name="Email"
+                    placeholder="E-mail*" required="">
+
+                <textarea class="form__text" name="text" placeholder="Message"></textarea>
+            </fieldset>
+            <button class="form__btn button button--green button--modal" type="submit">send</button>
+
+            <div class="placeholder"><small>* Required field</small></div>
+        </form>
+
+    </div>
+</div>
+
+<div class="popup popup--color popup--hidden js-popup ">
+    <div class="popup__inner popup__inner--color">
+        <button class="popup__btn-close btn-close js_btn-closePopup" aria-label="Close a window" type="button">
+        </button>
+        <h3 class="popup__title">Your message has been successfully sent!</h3>
+        <p class="popup__subtitle">We will contact you shortly!</p>
+    </div>
+</div>

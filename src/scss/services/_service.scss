@@ -1,4 +1,5 @@
 .service {
+    overflow: hidden;
     position: relative;
     @include section-grey;
 
@@ -58,6 +59,7 @@
 .service__items {
     opacity: 0;
     transform: translateX(-60px);
+    transition: all 0.8s ease-in-out;
 
     &:nth-child(2) {
         transform: translateX(60px);
@@ -75,8 +77,6 @@
 .service__items.animation-class {
     opacity: 1;
     transform: translateX(0);
-
-    transition: all 1s ease-in-out;
 }
 
 .service__bg {
@@ -92,19 +92,17 @@
 
     display: none;
 
-    @include tablet-768 {
-        display: block;
-    }
-
     @include tablet-992 {
-        left: -2%;
+        display: block;
+        top: 0;
+        right: 6%;
+        left: 8%;
+        bottom: -28%;
     }
 
     @include laptopM-1200 {
-        top: 0;
-        right: 5%;
-        left: 0;
-        bottom: -15%;
+        left: 0%;
+        bottom: -28%;
     }
 
     &--left {
@@ -118,19 +116,22 @@
     }
 
     &--1 {
-        @include mobile-425 {
-            background-image: url("img/services-icon/1.png");
+        background-image: url("img/services-icon/1.png");
 
-            background-size: 30%;
+        background-size: 28%;
+        right: 5%;
+        bottom: -15%;
+
+        @include laptopM-1200 {
+            background-size: 20%;
+            right: 0%;
         }
     }
 
     &--2 {
-        @include mobile-425 {
-            background-image: url("img/services-icon/2.png");
+        background-image: url("img/services-icon/2.png");
 
-            background-size: 20%;
-        }
+        background-size: 20%;
 
         @include tablet-992 {
             background-size: 13%;
@@ -138,34 +139,38 @@
     }
 
     &--3 {
-        @include mobile-425 {
-            background-image: url("img/services-icon/3.png");
+        background-image: url("img/services-icon/3.png");
 
-            background-size: 30%;
-        }
+        background-size: 30%;
+
+        right: 5%;
+        bottom: -15%;
 
         @include tablet-992 {
             background-size: 18%;
         }
 
         @include laptopM-1200 {
-            background-size: 20%;
+            background-size: 19%;
+            right: 0%;
+            bottom: -25%;
         }
     }
 
     &--4 {
-        @include mobile-425 {
-            background-image: url("img/services-icon/4.png");
+        background-image: url("img/services-icon/4.png");
 
-            background-size: 18%;
-        }
+        background-size: 18%;
+
+        bottom: -25%;
 
         @include tablet-992 {
             background-size: 18%;
         }
 
         @include laptopM-1200 {
-            background-size: 15%;
+            background-size: 14%;
+            left: -3%;
         }
     }
 }

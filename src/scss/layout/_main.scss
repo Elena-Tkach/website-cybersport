@@ -152,12 +152,12 @@
     }
 
     &--black {
-        background-color: rgba(0, 0, 0, 0.568);
+        // background-color: rgba(0, 0, 0, 0.568);
         box-shadow: 0 10px 15px rgb(0, 0, 0);
         &:hover,
         &:active,
         &:focus {
-            border-color: rgb(47, 58, 58);
+            border-color: rgb(59, 73, 73);
             box-shadow: 3px 8px 10px rgb(0, 0, 0);
         }
     }
@@ -174,12 +174,12 @@
     }
 
     &--modal {
-        padding: 12px 40px;
+        padding: 12px 55px;
 
         &:hover,
         &:focus,
         &:active {
-            padding: 12px 40px 12px 60px;
+            padding: 12px 40px 12px 75px;
 
             &::before {
                 opacity: 1;
@@ -188,7 +188,7 @@
         }
 
         @include mobile-567 {
-            padding: 16px 60px;
+            padding: 16px 65px;
 
             &:hover,
             &:focus,
@@ -362,5 +362,3 @@
         background-position: top center;
     }
 }
-
-

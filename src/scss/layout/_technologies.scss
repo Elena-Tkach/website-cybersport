@@ -4,6 +4,7 @@
     transition: all 0.6s ease;
 
     &__text {
+        z-index: 1;
         &--card1 {
             background-image: url(img/svg/teh1.svg);
         }
@@ -169,36 +170,37 @@
     }
 
     &__subtitle {
+        z-index: 1;
         margin-bottom: 10%;
     }
 }
 
 .technology__item {
+    z-index: 1;
     opacity: 0;
     transform: translateY(-60px);
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 
     &:nth-child(1) {
         transform: translateY(-20px);
-        // transition-delay: 0.2s;
     }
     &:nth-child(2) {
         transform: translateY(-25px);
-        transition-delay: 0.2s;
+        transition-delay: 0.1s;
     }
 
     &:nth-child(3) {
         transform: translateY(-30px);
-        transition-delay: 0.4s;
+        transition-delay: 0.2s;
     }
 
     &:nth-child(4) {
         transform: translateY(-35px);
-        transition-delay: 0.6s;
+        transition-delay: 0.3s;
     }
     &:nth-child(5) {
         transform: translateY(-40px);
-        transition-delay: 0.8s;
+        transition-delay: 0.4s;
     }
 }
 

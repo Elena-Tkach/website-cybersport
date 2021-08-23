@@ -10,7 +10,6 @@ window.addEventListener(`DOMContentLoaded`, () => {
     @@include('_simpleParallax.min.js');
 
 
-    @@include('_lang.js');
     @@include('_burger.js');
     @@include('_modal.js');
     @@include('_formSend.js');

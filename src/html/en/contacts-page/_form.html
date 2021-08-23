@@ -1,0 +1,36 @@
+<section class="feedback">
+    <h2 class="visually-hidden">Feedback form</h2>
+    <div class="feedback__image">
+        <picture>
+            <img class="feedback__img" src="img/contacts-page/city2.jpg" alt="Night road of Moscow city">
+        </picture>
+    </div>
+
+    <div class="container">
+        <div class="feedback__inner">
+            <p class="feedback__subtitle subtitle subtitle--white">Fill out the feedback form and use
+                advantages <span class="feedback__subtitle--span">cybersport</span>
+            </p>
+
+            <form class="feedback__form form  js-form" action="mail.php" enctype="multipart/form-data" method="POST">
+                <input type="hidden" name="admin_email[]" value="info@sport-pay.ru"> <input type="hidden"
+                    name="form_subject" value="Application from the site cybersport">
+                <fieldset class="form__group form__group--contacts">
+                    <input class="form__input form__input--contacts form__name" type="text" name="Name"
+                        placeholder="Name*" required="">
+
+                    <input class="form__input form__input--contacts form__phone" type="tel" name="Tel"
+                        placeholder="Phone*" required="">
+
+                    <input class="form__input form__input--contacts form__email" type="email" name="Email"
+                        placeholder="Email*" required="">
+
+                    <textarea class="form__text" name="text" placeholder="Message"></textarea>
+                </fieldset>
+                <button class="form__btn button button--green" type="submit">Connect</button>
+
+                <div class="placeholder"><small>* Required field</small></div>
+            </form>
+        </div>
+    </div>
+</section>

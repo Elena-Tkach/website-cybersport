@@ -67,7 +67,9 @@
     }
 
     &__subtitle {
+        align-items: center;
         margin-bottom: 15%;
+        width: 90%;
 
         &--span {
             text-transform: uppercase;
@@ -77,6 +79,7 @@
 
 .form {
     padding: 0 2%;
+    text-align: center;
 
     @include tablet-768 {
         padding: 0;
@@ -85,7 +88,7 @@
         border: none;
         margin: 0;
         padding: 0;
-        margin-bottom: 10%;
+        margin-bottom: 8%;
         display: flex;
         flex-direction: column;
     }
@@ -111,8 +114,38 @@
             color: $text-hover;
             @include font-style(0.7vw, 300);
         }
-        &:last-child {
-            margin-bottom: 0;
+    }
+
+    &__text {
+        outline: none;
+        color: $text-color;
+        @include font-style(0.7vw, 300);
+
+        padding-top: 3%;
+        padding-left: 5%;
+
+        width: 100%;
+        min-height: 80px;
+        resize: vertical;
+
+        background-color: transparent;
+        border: 1px solid $text-hover;
+        border-radius: 10px;
+
+        @include tablet-992 {
+            border-radius: 20px;
+            min-height: 150px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            border: 1px solid $color-green;
+        }
+
+        &::placeholder {
+            color: $text-hover;
+            @include font-style(0.7vw, 300);
         }
     }
 

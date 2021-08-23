@@ -141,10 +141,22 @@ const jsBuild = () => {
 const htmlBuild = () => {
     return src(['./src/html/*.html'])
         .pipe(fileInclude())
-        .pipe(htmlmin({ collapseWhitespace: true }))
+        // .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(dest('./dist'))
 }
 
+const imagesBuild = () => {
+    return src(['./src/img/**/*.{jpg,png,svg,ico,gif,webp,mp4}'])
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{ removeViewBox: false }],
+            interlaced: true,
+            optomizationLevel: 2
+        }))
+        .pipe(dest('./dist/img'))
+        .pipe(browserSync.stream());
+}
 
-exports.build = series(clean, parallel(htmlBuild, jsBuild, fonts, resources, images), cssBuild);
+
+exports.build = series(clean, parallel(htmlBuild, jsBuild, fonts, resources, imagesBuild), cssBuild);
 

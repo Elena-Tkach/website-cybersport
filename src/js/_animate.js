@@ -2,13 +2,11 @@ const scrollItems = document.querySelectorAll(`.js-scroll`);
 
 
 window.addEventListener(`scroll`, function () {
-
     checkBoxes(scrollItems);
 });
 
-
-function checkBoxes(item, box) {
-    const triggerTop = window.innerHeight - 200;
+function checkBoxes(item) {
+    const triggerTop = window.innerHeight - 100;
 
 
     item.forEach(box => {

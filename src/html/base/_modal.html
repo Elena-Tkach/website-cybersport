@@ -7,17 +7,19 @@
         </p>
 
         <form class="feedback__form form  js-form" action="mail.php" enctype="multipart/form-data" method="POST">
-            <input type="hidden" name="admin_email[]" value="tcachelena@gmail.com"> <input type="hidden"
-                name="form_subject" value="Заявка с сайта">
+            <input type="hidden" name="admin_email[]" value="info@sport-pay.ru"> <input type="hidden"
+                name="form_subject" value="Заявка с сайта КИБЕРСПОРТ">
             <fieldset class="form__group form__group--contacts">
                 <input class="form__input form__input--contacts form__name" type="text" name="Name"
                     placeholder="Ваше имя *" required="">
 
                 <input class="form__input form__input--contacts form__phone" type="tel" name="Tel"
-                    placeholder="Номер телефона*" required="" inputmode="text">
+                    placeholder="Номер телефона*" required="">
 
                 <input class="form__input form__input--contacts form__email" type="email" name="Email"
                     placeholder="Email*" required="">
+
+                <textarea class="form__text" name="text" placeholder="Сообщение"></textarea>
             </fieldset>
             <button class="form__btn button button--green button--modal" type="submit">Отправить</button>
 

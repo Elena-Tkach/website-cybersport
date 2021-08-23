@@ -1,29 +1,30 @@
-// /* Прячем панель гугла */
-
-// .skiptranslate {
-//     display: none !important;
-// }
-
-// /* Убираем подсветку ссылок */
-
-// .goog-text-highlight {
-//     background-color: inherit;
-//     box-shadow: none;
-//     box-sizing: inherit;
-// }
-
 .lang {
     &__list {
         display: flex;
+        justify-content: space-around;
+        // align-items: start;
         @include list-reset;
+        margin-top: 20px;
+
+        @include mobile-567 {
+            justify-content: flex-start;
+        }
+
+        @include tablet-992 {
+            margin: 0;
+        }
     }
 
     &__item {
-        margin-right: 10%;
+        margin-right: 40%;
         cursor: pointer;
 
         &:last-child {
             margin-right: 0;
+        }
+
+        @include tablet-992 {
+            margin-right: 10%;
         }
     }
 

@@ -3,6 +3,7 @@
     position: fixed;
 
     visibility: hidden;
+    overflow: auto;
     opacity: 0;
 
     top: 0;
@@ -35,12 +36,12 @@
         background: $gradient-form;
 
         @include tablet-768 {
-            padding: 15vh;
+            padding: 10vh;
             width: 600px;
         }
 
         @include laptopM-1200 {
-            padding: 5%;
+            padding: 4%;
         }
     }
 }
